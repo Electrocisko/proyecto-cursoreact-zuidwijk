@@ -1,9 +1,6 @@
-*{
-    box-sizing: border-box;
-}
 
-body{
-    margin: 0%;
+.main-nav{
+    position: relative;
 }
 
 .nav-bar{
@@ -31,14 +28,18 @@ body{
 
 .menu__link{
     display: block;
-    padding: 20px;
+    padding: 1rem;
     color: antiquewhite;
-    font-size: 1.2em;
     text-decoration: none;
 }
 
 .menu__link:hover{
     background: #1976D2;
+}
+
+.logo{
+   width: 20px;
+    height: 20px;
 }
 
 .submenu{
@@ -60,6 +61,20 @@ body{
     margin-left: 0;
 }
 
+#icono-logo{
+    position: absolute;
+    left: 5px;
+    height: 30px;
+}
+
+
+.icono-carrito{
+    color: antiquewhite;
+    position: absolute;
+    right: 5%;
+    top:15px;
+}
+
 
 @media(min-width:1024px){
     .nav-bar{
@@ -68,6 +83,7 @@ body{
     .menu{
         margin-left: 0;
         display: flex;
+        
     }
 
     .container-submenu{
