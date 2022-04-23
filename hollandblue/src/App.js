@@ -2,6 +2,7 @@
 import './App.css';
 import NavBar from './components/NavBar/NavBar';
 import ItemlListContainer from './components/ItemListContainer/ItemlListContainer';
+import ItemCount from './components/ItemCount/ItemCount';
 
 
 
@@ -10,7 +11,7 @@ function App() {
     
     <div className="App">
       <NavBar/>
-      <ItemlListContainer greeting="Pagina en construccion Holland Blue"/>
+      <ItemlListContainer/>
     </div>
    
     
