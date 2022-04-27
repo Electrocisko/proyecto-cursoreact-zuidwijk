@@ -8,13 +8,13 @@ import ItemCount from './components/ItemCount/ItemCount';
 
 function App() {
   return (
-    
+    <>
     <div className="App">
       <NavBar/>
       <ItemlListContainer/>
     </div>
-   
     
+    </>
   );
 }
 

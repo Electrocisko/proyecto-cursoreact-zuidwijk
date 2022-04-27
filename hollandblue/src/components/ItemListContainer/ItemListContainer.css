@@ -2,3 +2,8 @@
     margin: 20px;
 }
 
+.contenedor__productos{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}

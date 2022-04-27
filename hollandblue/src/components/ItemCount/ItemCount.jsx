@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import  './ItemCount.css'
 
 
+
 function ItemCount(props) {
 
     let stock = props.stock;

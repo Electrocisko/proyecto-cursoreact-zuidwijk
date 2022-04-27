@@ -1,0 +1,31 @@
+
+
+.productos{
+   border-radius: 10px;
+   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+   width: 250px;
+   margin: 20px;
+   
+}
+
+.productos__card__title{
+    color: blue;
+    font-size:large;
+    margin: 0%;
+}
+
+.productos__card__precio{
+    position: relative;
+    top: -20px;
+    font-size: medium;
+    color: blue;
+    font-weight:normal;
+    margin: 0%;
+}
+
+.productos__description{
+    color: #1976D2;
+    position: relative;
+    top: -50px;
+    margin: 0px;
+}
