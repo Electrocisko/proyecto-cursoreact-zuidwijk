@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState,  } from 'react';
 import  './ItemCount.css'
 
 
@@ -15,10 +15,7 @@ function ItemCount(props) {
     return (
         <div className='contenedor'>
             <div className='card'>
-                <div className='card__info'>
-                    <h3>Vasija Delft</h3>
-                </div>
-                <p>Stock disponible {stock}</p>
+               <div className='stock-text'>Stock: {stock}</div>
                 <div className='contenedor__botones'>
                     <button className='boton card__boton' onClick={count > 1 && restar}><i class="fa-solid fa-minus"></i></button>
                     <input className='card__stock' readOnly value={count} />

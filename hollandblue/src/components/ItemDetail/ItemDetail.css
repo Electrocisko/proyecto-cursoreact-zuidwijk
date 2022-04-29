@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=MonteCarlo&display=swap');
+.img-detail{
+    width: 400px;
+}
+
+.contenedor-img-detail{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor-detail{
+    display: flex;
+    margin-left: 10%;
+    margin-right: 10%;
+    color: blue;
+}
+
+.contenedor-detail-texto{
+    width: 100%;
+    text-align: left;
+    padding-left: 20%;
+    font-size: larger;
+}
+
+.detail-price{
+display: inline-block;
+    
+}
+
+.detail-titel{
+    font-family: 'MonteCarlo', cursive;
+    color:#857650;
+    font-weight: normal;
+    font-size: 5rem;
+    margin-top: 0%;
+}
+
+.price{
+ text-align: center;
+ font-weight: normal;
+}

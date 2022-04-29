@@ -7,12 +7,8 @@
 
 
 .card{
-    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
     width: 250px;
-    height: 150px;
-    margin: 20px;
 }
-
 
 .contenedor__botones{
     display: flex;
@@ -66,4 +62,9 @@
 
 p{
     font-size: smaller;
+}
+
+.stock-text{
+    text-align: center;
+    font-size: medium;
 }
