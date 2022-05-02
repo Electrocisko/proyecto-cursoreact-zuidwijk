@@ -1,6 +1,8 @@
 import React from 'react';
 import './Item.css';
-import ItemCount from '../ItemCount/ItemCount';
+import { Link } from 'react-router-dom';
+
+
 
 
 
@@ -9,10 +11,10 @@ function Item({item}) {
     return (    
         <div className='productos'>
             <div className='productos__card'>
-                <h3 className='productos__card__title'>{item.title}</h3>
-                <img src={item.pictureUrl} alt="" width="100%" className='card__img'/> 
+                <Link className='link' to={'/item/' + item.id} > <h3 className='productos__card__title'>{item.title}</h3></Link>
+                <Link to={'/item/' + item.id} > <img src={item.pictureUrl} alt={item.title} width="100%" className='card__img'/></Link> 
                 <p className='productos__description'>{item.description}</p>  
-                <p className='productos__card__precio'>Precio: ${item.price} AR</p>            
+                <p className='productos__card__precio'>{item.price}</p>            
             </div>
         </div>
     );

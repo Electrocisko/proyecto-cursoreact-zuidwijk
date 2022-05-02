@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import './ItemListContainer.css'
 import ItemList from '../ItemList/ItemList';
-import productos from '../../Assets/Productos/Productos';
 
-let listaProductos = productos;
 
 function ItemlListContainer(props) {
+    console.log(props.items);
 
+ 
     const pedirProductos = ()=>{
         return new Promise((resolve,reject)=>{
-            setTimeout(()=>{resolve(listaProductos)},2000);
+            setTimeout(()=>{resolve(props.items)},2000);
         })
     }
     
@@ -23,7 +23,7 @@ function ItemlListContainer(props) {
     return (
         <>
         <div className='contenedor__productos'>
-            <ItemList items={productos}/> 
+            <ItemList items={productos}/>
         </div>
         </>
     );

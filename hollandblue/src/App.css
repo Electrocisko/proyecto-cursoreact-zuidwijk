@@ -4,8 +4,9 @@
 
 
 .App{
-  background-color: whitesmoke;
+  background-color: white;
   height: 100vh;
   text-align: center;
+  text-decoration: none;
 }
 

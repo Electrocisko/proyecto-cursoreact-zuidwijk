@@ -1,11 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import ItemDetail from '../ItemDetail/ItemDetail';
 import productos from '../../Assets/Productos/Productos';
+import { useParams } from 'react-router-dom';
 
 
-let productoAMostrar = productos[4]; //Elegi un producto cualquiera para mostrar
+
+
 
 function ItemDetailContainer(props) {
+
+    const {id} = useParams();
+    
+    let productoAMostrar = productos.find(dato=> dato.id===id);
+    
 
    const[producto,setProducto] = useState([]);
 

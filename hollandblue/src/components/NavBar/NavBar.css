@@ -62,9 +62,9 @@
 }
 
 #icono-logo{
-    position: absolute;
-    left: 5px;
-    height: 30px;
+    position: inline block;
+    margin:10px;
+    height: 20px;
 }
 
 
@@ -75,6 +75,25 @@
     top:15px;
 }
 
+.link-navbar{
+    line-height: 40px;
+    text-decoration: none;
+    color: black;
+}
+
+.link-active{
+    display: block;
+    padding: 1rem;
+    color: blue;
+    text-decoration: none;
+}
+
+
+/* .menu__item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
 
 @media(min-width:1024px){
     .nav-bar{

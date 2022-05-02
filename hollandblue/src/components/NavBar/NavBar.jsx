@@ -2,8 +2,7 @@ import React from 'react';
 import './NavBar.css';
 import CartWidget from '../CartWidget/CartWidget';
 import molino from './imagenes/molino.png';
-
-
+import {Link} from 'react-router-dom';
 
 
 function NavBar(props) {
@@ -13,15 +12,14 @@ function NavBar(props) {
        
         <nav className="main-nav">
             <ul className="menu" id="menu">
-                  <li className="menu__item"><a href="#" className="menu__link logo" ><img id='icono-logo' src={molino} alt="" /></a></li>
-                  <li className="menu__item"><a href="#" className="menu__link">Holland Blue</a></li>
+                  <li className="menu__item"><Link className='link-navbar' to={'/'}><img id='icono-logo' src={molino} alt="" /></Link></li>
+                  <li className="menu__item"><Link className='menu__link' to={'/'}>Holland Blue</Link></li>
                   <li className="menu__item container-submenu">
-                    <a href="" className="menu__link submenu-btn" id="productos">Productos <i className="fas fa-chevron-down"></i> </a>
+                    <a href="#" className="menu__link submenu-btn" id="productos">Productos <i className="fas fa-chevron-down"></i> </a>
                     <ul className="submenu" id="sub-productos">
-                        <li className="menu__item"><a href="#" className="menu__link">Adornos</a></li>
-                        <li className="menu__item"><a href="#" className="menu__link">Azulejos</a></li>
-                        <li className="menu__item"><a href="#" className="menu__link">Platos</a></li>
-                        <li className="menu__item"><a href="#" className="menu__link">General</a></li>
+                        <li className="menu__item"><Link className='menu__link' to={'/category/adornos'}>Adornos</Link></li>
+                        <li className="menu__item"><Link className='menu__link' to={'/category/azulejos'}>Azulejos</Link></li>
+                        <li className="menu__item"><Link className='menu__link' to={'/category/vajillas'}>Vajillas</Link></li>
                     </ul>
                   </li>
                   <li className="menu__item"><a href="#" className="menu__link">Contacto</a></li>
