@@ -1,12 +1,12 @@
 import React from 'react';
 import ItemlListContainer from '../../components/ItemListContainer/ItemlListContainer';
-import productos from '../../Assets/Productos/Productos';
-
+import NavBar from '../../components/NavBar/NavBar';
 
 function HomePage(props) {
     return (
         <div>
-            <ItemlListContainer items={productos} />
+            <NavBar/>
+            <ItemlListContainer />
         </div>
     );
 }

@@ -5,6 +5,7 @@ import ItemCount from '../ItemCount/ItemCount';
 function ItemDetail({item}) {
 
     const onAdd = ()=>{
+      
         console.log("Agregado a carrito");
     }
   

@@ -4,16 +4,12 @@ import productos from '../../Assets/Productos/Productos';
 import { useParams } from 'react-router-dom';
 
 
-
-
-
 function ItemDetailContainer(props) {
 
     const {id} = useParams();
     
     let productoAMostrar = productos.find(dato=> dato.id===id);
-    
-
+   
    const[producto,setProducto] = useState([]);
 
    const cargarProducto = ()=>{

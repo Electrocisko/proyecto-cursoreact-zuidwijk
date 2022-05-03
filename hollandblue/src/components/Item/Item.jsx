@@ -2,12 +2,9 @@ import React from 'react';
 import './Item.css';
 import { Link } from 'react-router-dom';
 
-
-
-
-
 function Item({item}) {
 
+    //A la imagen y titulo le agregue un Link para ver el detalle
     return (    
         <div className='productos'>
             <div className='productos__card'>

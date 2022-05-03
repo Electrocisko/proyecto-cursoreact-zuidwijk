@@ -15,7 +15,7 @@ function NavBar(props) {
                   <li className="menu__item"><Link className='link-navbar' to={'/'}><img id='icono-logo' src={molino} alt="" /></Link></li>
                   <li className="menu__item"><Link className='menu__link' to={'/'}>Holland Blue</Link></li>
                   <li className="menu__item container-submenu">
-                    <a href="#" className="menu__link submenu-btn" id="productos">Productos <i className="fas fa-chevron-down"></i> </a>
+                    <Link to='/' className="menu__link submenu-btn" id="productos">Productos <i className="fas fa-chevron-down"></i> </Link>
                     <ul className="submenu" id="sub-productos">
                         <li className="menu__item"><Link className='menu__link' to={'/category/adornos'}>Adornos</Link></li>
                         <li className="menu__item"><Link className='menu__link' to={'/category/azulejos'}>Azulejos</Link></li>
