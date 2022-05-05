@@ -7,3 +7,5 @@ Por el momento el navbar no es responsive, pero en futuro si.
 La pagina contiene un navbar que muestra el logo, la marca, productos con un dropdown para mostrar las tres categorías y por ultimo el icono del carrito de compras.
 El home muestra todos los productos, si una clickea sobre la imagen o titulo puede entrar a detalle del producto.
 Dentro de detalle del producto esta el counter para agregar a carrito.
+
+![Animation](https://user-images.githubusercontent.com/95722318/166915957-cfb71811-b0f8-4a01-bda4-ee5d3bd992fb.gif)
