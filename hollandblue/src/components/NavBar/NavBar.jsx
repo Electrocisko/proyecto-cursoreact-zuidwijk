@@ -6,6 +6,10 @@ import {Link} from 'react-router-dom';
 
 
 function NavBar(props) {
+
+
+
+    
     return (
         <>
         <span  className="nav-bar" id="btnMenu"> <i className="fas fa-bars"></i>Menú</span>

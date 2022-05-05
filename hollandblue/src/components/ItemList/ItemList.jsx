@@ -2,7 +2,10 @@ import React from 'react';
 import Item from '../Item/Item';
 
 function ItemList({items}) {
+
+   
     return (
+       
        
         <div className='contenedor__productos'>
             {items.map((item)=> <Item item={item} key={item.id}/>)}

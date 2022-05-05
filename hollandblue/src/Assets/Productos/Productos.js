@@ -18,7 +18,7 @@ const productos =[
         price: "Precio: $1100 AR",
         measures: "Medidas:-",
         weight: "Peso: 230 grs",
-        stock:1,
+        stock:3,
         description: "Esta taza y platillo en Delft Blue está pintada a mano. Debido a que la decoración está pintada a mano, se ve una gran variedad de Delft Blue.",
         pictureUrl:'https://royaldelft.com/wp-content/uploads/2020/12/10112800-1-scaled-300x300.jpg'
     },
@@ -84,7 +84,7 @@ const productos =[
         price: "Precio: $950 AR",
         measures: "Medidas: 11 × 3.4 × 11.5 cm",
         weight: "Peso: 190 gr.",
-        stock:2,
+        stock:6,
         description:"Una casa azul de Delft es uno de los recuerdos icónicos de los Países Bajos. Esta casa es una copia de los Archivos Municipales de Delft ",
         pictureUrl:'https://royaldelft.com/wp-content/uploads/2020/12/10641900-1-scaled-300x300.jpg'
     }
