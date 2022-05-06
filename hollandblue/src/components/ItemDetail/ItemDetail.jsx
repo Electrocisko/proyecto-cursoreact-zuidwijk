@@ -1,13 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './ItemDetail.css';
 import ItemCount from '../ItemCount/ItemCount';
+import MyButton from '../MyButton/MyButton';
 
 function ItemDetail({item}) {
 
-    const onAdd = ()=>{
-      
-        console.log("Agregado a carrito");
-    }
+    const[cantIngresar, setCantIngresar] = useState(0);
+
+    function addHandler(quantityToAdd){
+        console.log("esto en Item Detail: " + quantityToAdd)
+        setCantIngresar(quantityToAdd);
+    };
+
   
     return (
         <div className='contenedor-detail'>
@@ -26,11 +30,13 @@ function ItemDetail({item}) {
                     <p>{item.measures}</p>
                     <p>{item.weight}</p>
                 </div>
-                <div>
-                    <ItemCount stock={item.stock} initial={1} onAdd={onAdd}/>
+                <div >
+                    {cantIngresar ?
+                         <MyButton pathDestino={'/cart'} textoBoton={'Terminar Compra ' + cantIngresar + ' items' }></MyButton>:
+                         <ItemCount initial={1} stock={item.stock} onAdd={addHandler} />
+                    }
                 </div>
             </div>
-           
         </div>
     );
 }

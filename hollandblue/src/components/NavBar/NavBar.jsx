@@ -27,7 +27,7 @@ function NavBar(props) {
                     </ul>
                   </li>
                   <li className="menu__item"><a href="#" className="menu__link">Contacto</a></li>
-                  <span className='icono-carrito'><CartWidget/></span>
+                  <span className='icono-carrito'><CartWidget cant={0}/></span>
             </ul>
         </nav>
         </>

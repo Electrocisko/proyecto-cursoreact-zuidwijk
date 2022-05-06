@@ -3,10 +3,9 @@ import  './ItemCount.css'
 
 
 
-function ItemCount(props) {
+function ItemCount({stock, initial, onAdd}) {
 
-    let stock = props.stock;
-    let initial = props.initial;
+  
 
     const [count,setCount] = useState(initial);
     const sumar = ()=> setCount(count+1);
@@ -21,7 +20,7 @@ function ItemCount(props) {
                     <input className='card__stock' readOnly value={count} />
                     <button className='boton card__boton' onClick={count <stock && sumar}><i class="fa-solid fa-plus"></i></button> 
                 </div>
-                <button className='boton-agregar' onClick={props.onAdd}>Agregar carrito</button>
+                <button className='boton-agregar' onClick={()=>onAdd(count)}>Agregar carrito</button>
             </div>
         </div>
      
