@@ -8,7 +8,6 @@ function ItemDetail({item}) {
     const[cantIngresar, setCantIngresar] = useState(0);
 
     function addHandler(quantityToAdd){
-        console.log("esto en Item Detail: " + quantityToAdd)
         setCantIngresar(quantityToAdd);
     };
 

@@ -14,18 +14,12 @@ function ItemlListContainer(props) {
     //defino un ternario para cuando el id no esta definido muestre todos los productos
     id === undefined ? listaProductos=productos  : listaProductos = productos.filter((dato)=>dato.categoryId === id);
     id === undefined ? categoria = "PRODUCTOS" : categoria = id.toUpperCase();
-    const pedirProductos = ()=>{
-        return new Promise((resolve,reject)=>{
-            setTimeout(()=>{resolve(listaProductos)},2000);
-        })
-    }
-    
+       
     const [items,setItem] = useState([]);  
-  
+ 
     useEffect(()=>{
-        pedirProductos()
-        .then(items =>{ setItem(items)})
-    },[id]);
+        setItem(listaProductos);
+    },[id])
 
     return (
         <>

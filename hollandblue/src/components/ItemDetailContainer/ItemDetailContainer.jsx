@@ -7,20 +7,11 @@ import { useParams } from 'react-router-dom';
 function ItemDetailContainer(props) {
 
     const {id} = useParams();
-    
-    let productoAMostrar = productos.find(dato=> dato.id===id);
-   
-   const[producto,setProducto] = useState([]);
-
-   const cargarProducto = ()=>{
-        return new Promise((resolve,reject)=>{
-            setTimeout(()=>{resolve(productoAMostrar)},2000)
-        })
-   }
+    const[producto,setProducto] = useState([]);
 
    useEffect(()=>{
-    cargarProducto()
-        .then( item =>{setProducto(item)})
+    let productoAMostrar = productos.find(dato=> dato.id===id);
+    setProducto(productoAMostrar);
    },[]);
 
 
