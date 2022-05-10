@@ -31,7 +31,7 @@ function ItemDetail({item}) {
                 </div>
                 <div >
                     {cantIngresar ?
-                         <MyButton pathDestino={'/cart'} textoBoton={'Terminar Compra ' + cantIngresar + ' items' }></MyButton>:
+                         <MyButton item={item}  cantidad={cantIngresar} pathDestino={'/cart'} textoBoton={'Terminar Compra ' + cantIngresar + ' items' }></MyButton>:
                          <ItemCount initial={1} stock={item.stock} onAdd={addHandler} />
                     }
                 </div>

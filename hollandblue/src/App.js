@@ -10,12 +10,13 @@ function App() {
   return (
     <>
     <div className="App">
-      <Routes>
-        <Route path='/' element={<HomePage/>}/>
-        <Route path='/category/:id' element={<CategoryPage/>}/>
-        <Route path='/item/:id' element={<ItemPage/>}/>
-        <Route path='*' element={<Navigate replace to='/'/>}/>
-      </Routes>
+      
+        <Routes>
+          <Route path='/' element={<HomePage/>}/>
+          <Route path='/category/:id' element={<CategoryPage/>}/>
+          <Route path='/item/:id' element={<ItemPage/>}/>
+          <Route path='*' element={<Navigate replace to='/'/>}/>
+        </Routes>
     </div>
     
     </>

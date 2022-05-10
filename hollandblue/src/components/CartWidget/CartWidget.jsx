@@ -1,6 +1,10 @@
 import React from 'react';
 
 const CartWidget = (props) => {
+
+
+    
+
     return (
         <div>
            <i className="fa-solid fa-cart-shopping fa-2x"></i>
