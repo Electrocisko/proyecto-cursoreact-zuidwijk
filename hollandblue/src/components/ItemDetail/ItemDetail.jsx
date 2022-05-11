@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import './ItemDetail.css';
 import ItemCount from '../ItemCount/ItemCount';
 import MyButton from '../MyButton/MyButton';
@@ -9,15 +9,32 @@ import CartContext from '../../Context/cart-context';
 
 function ItemDetail({item}) {
 
-    const[cantIngresar, setCantIngresar] = useState(0);
+  // Creo un estado booleano para seguir comprando
+    const[seguirComprando,setSeguirComprando] = useState(true);
+
     const cartCtx = useContext(CartContext);
     let cantidadEnCarrito = cartCtx.getCartQuantity();
-    let seguirComprando = true;
+    let mostrartBoton;
 
-    
+    useEffect(()=>{
+        console.log('seguir comprando: ' + seguirComprando);
+    },{seguirComprando})
+
+    //Cuando ingreso un producto seguirComprando es falso, pero habilito otro boton para cambiar su estado para seguir comprando
     function addHandler(cantIngresar) {
         cartCtx.addProducto({quantity: cantIngresar, ...item});
+        setSeguirComprando(false);
     }
+
+    if (seguirComprando) {
+        mostrartBoton = <ItemCount initial={1} stock={item.stock} onAdd={addHandler} /> 
+      } else {
+        mostrartBoton = 
+        <>
+        <MyButton item={item}  cantidad={cantidadEnCarrito} pathDestino={'/cart'} textoBoton={'Terminar Compra ' + cantidadEnCarrito + ' items' }></MyButton>
+        <MyButton item={item}  cantidad={cantidadEnCarrito} pathDestino={'/'} textoBoton={'Seguir comprando' }></MyButton>
+        </>
+      }
 
   
         return (
@@ -37,9 +54,9 @@ function ItemDetail({item}) {
                         <p>{item.weight}</p>
                     </div>
                     <div >
-                        <MyButton item={item}  cantidad={cantidadEnCarrito} pathDestino={'/cart'} textoBoton={'Terminar Compra ' + cantidadEnCarrito + ' items' }></MyButton>
-                        <MyButton item={item}  cantidad={cantidadEnCarrito} pathDestino={'/'} textoBoton={'Seguir comprando' }></MyButton>
-                        <ItemCount initial={1} stock={item.stock} onAdd={addHandler} />  
+
+                       {mostrartBoton}
+                         
                     </div>
                 </div>
             </div>)

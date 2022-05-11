@@ -1,5 +1,8 @@
 import React, { useContext } from 'react';
 import CartContext from '../../Context/cart-context';
+import {Link} from 'react-router-dom';
+
+
 
 
 const CartWidget = (props) => {
@@ -13,10 +16,12 @@ const CartWidget = (props) => {
    let cantEnCarrito = cartCtx.getCartQuantity()
 
     return (
-        <div>
-           <i className="fa-solid fa-cart-shopping fa-2x"></i>
-           <span>{cantEnCarrito}</span>
-        </div>
+       
+            <div>
+                <i className="fa-solid fa-cart-shopping fa-2x"></i>
+                <span>{cantEnCarrito}</span>
+            </div>
+        
     );  
 };
 

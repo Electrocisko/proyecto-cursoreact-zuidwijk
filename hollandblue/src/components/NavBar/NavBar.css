@@ -89,6 +89,11 @@
     text-decoration: none;
 }
 
+.carrito-navbar{
+    text-decoration: none;
+    color: antiquewhite;
+}
+
 
 /* .menu__item{
     display: flex;
