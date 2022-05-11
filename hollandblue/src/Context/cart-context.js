@@ -32,8 +32,13 @@ export const CartContextProvider = ({children})=>{
         setListaProductos([]);
     }
 
+    const removerPorId = (id)=> {
+        listaProductos(listaProductos.filter((item) => item.id !== id));
+      }
 
-
+    const isInCart = (id) => {
+        listaProductos.find((element)=>element.id === id);
+    }
 
 
 
