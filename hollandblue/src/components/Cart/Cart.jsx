@@ -9,7 +9,7 @@ function Cart(props) {
 
    
 
-   const carrito = useContext(CartContext)
+  const carrito = useContext(CartContext)
 
   let cantDeItems = carrito.productos.length;
   let cantDeProductos = carrito.getCartQuantity();
@@ -32,8 +32,7 @@ function Cart(props) {
           <ul>
             {productosAmostrar.map(element => <li>{element.title}s:  {element.quantity}</li>)}
           </ul>
-          
-          
+          <button onClick={()=>carrito.clear()}>Vaciar Carrito</button>
         </div>
     );
 }
