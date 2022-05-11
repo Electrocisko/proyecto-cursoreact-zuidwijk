@@ -30,6 +30,8 @@ export const CartContextProvider = ({children})=>{
 
     const clear = () => {
         setListaProductos([]);
+        //Este lo hago para que reinicie el stock original, porque si bien vacia el carrito, el stock que fui descontando queda igual.
+        window.location.reload(false);
     }
 
     const removerPorId = (id)=> {

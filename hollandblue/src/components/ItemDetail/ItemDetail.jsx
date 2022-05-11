@@ -12,6 +12,9 @@ function ItemDetail({item}) {
 
     const cartCtx = useContext(CartContext);
     let cantidadEnCarrito = cartCtx.getCartQuantity();
+    console.log('cantidad en carrito' + cantidadEnCarrito);
+    console.log('producto' + item.title);
+    console.log('stock' + item.stock);
     let mostrartBoton;
 
   
@@ -19,11 +22,16 @@ function ItemDetail({item}) {
     //Cuando ingreso un producto seguirComprando es falso, pero habilito otro boton para cambiar su estado para seguir comprando
     function addHandler(cantIngresar) {
         cartCtx.addProducto({quantity: cantIngresar, ...item});
+        if(item.stock <=0) {item.stock=0}
+        else{
+            item.stock = item.stock-cantIngresar; 
+        }
+        
         setSeguirComprando(false);
     }
 
     if (seguirComprando) {
-        mostrartBoton = <ItemCount initial={1} stock={item.stock} onAdd={addHandler} /> 
+        mostrartBoton = <ItemCount initial={0} stock={item.stock} onAdd={addHandler} /> 
       } else {
         mostrartBoton = 
         <>
