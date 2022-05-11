@@ -5,8 +5,6 @@ import MyButton from '../MyButton/MyButton';
 import CartContext from '../../Context/cart-context';
 
 
-
-
 function ItemDetail({item}) {
 
   // Creo un estado booleano para seguir comprando
@@ -16,9 +14,7 @@ function ItemDetail({item}) {
     let cantidadEnCarrito = cartCtx.getCartQuantity();
     let mostrartBoton;
 
-    useEffect(()=>{
-        console.log('seguir comprando: ' + seguirComprando);
-    },{seguirComprando})
+  
 
     //Cuando ingreso un producto seguirComprando es falso, pero habilito otro boton para cambiar su estado para seguir comprando
     function addHandler(cantIngresar) {
@@ -54,9 +50,7 @@ function ItemDetail({item}) {
                         <p>{item.weight}</p>
                     </div>
                     <div >
-
-                       {mostrartBoton}
-                         
+                       {mostrartBoton}  
                     </div>
                 </div>
             </div>)

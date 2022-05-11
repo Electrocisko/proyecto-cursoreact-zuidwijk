@@ -4,7 +4,7 @@ import {createContext, useState} from 'react';
 
 const CartContext = createContext({
     productos:[],
-    addProducto: ()=>{}
+    addProducto: ()=>{},
 });
 
 export const CartContextProvider = ({children})=>{
@@ -40,16 +40,15 @@ export const CartContextProvider = ({children})=>{
         listaProductos.find((element)=>element.id === id);
     }
 
-
-
-
-
     return(
         <CartContext.Provider value={{
             productos: listaProductos,
             addProducto: addProducto,
             getCartQuantity,
-            clear
+            clear,
+            removerPorId,
+            isInCart
+
             }}>
             {children};
         </CartContext.Provider>

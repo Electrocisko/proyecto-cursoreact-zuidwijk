@@ -17,10 +17,7 @@ function MyButton({pathDestino,textoBoton,item,cantidad }) {
         <div>
             <Link className='link-personalizado' to={pathDestino}>
                 <button  className='boton-personalizado'>{textoBoton} </button>
-            </Link>
-
-            
-              
+            </Link> 
         </div>
     );
 }

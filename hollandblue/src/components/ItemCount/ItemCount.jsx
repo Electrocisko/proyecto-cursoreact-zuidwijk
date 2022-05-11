@@ -5,8 +5,6 @@ import  './ItemCount.css'
 
 function ItemCount({stock, initial, onAdd}) {
 
-  
-
     const [count,setCount] = useState(initial);
     const sumar = ()=> count <stock? setCount(count+1): console.log("No hay stock");
     const restar = ()=> count > 1? setCount(count-1): console.log("No se puede restar");
