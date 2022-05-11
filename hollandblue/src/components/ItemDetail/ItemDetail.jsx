@@ -1,15 +1,26 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import './ItemDetail.css';
 import ItemCount from '../ItemCount/ItemCount';
 import MyButton from '../MyButton/MyButton';
+import CartContext from '../../Context/cart-context';
+
+
 
 function ItemDetail({item}) {
 
     const[cantIngresar, setCantIngresar] = useState(0);
 
-    function addHandler(quantityToAdd){
-        setCantIngresar(quantityToAdd);
-    };
+    const cartCtx = useContext(CartContext);
+
+    let cantidadEnCarrito = cartCtx.getCartQuantity();
+
+    
+    function addHandler(cantIngresar) {
+        console.log('addHandler'+ cantIngresar);
+        cartCtx.addProducto({quantity: cantIngresar, ...item});
+    }
+
+
 
   
     return (
@@ -30,12 +41,14 @@ function ItemDetail({item}) {
                     <p>{item.weight}</p>
                 </div>
                 <div >
-                    {cantIngresar ?
-                         <MyButton item={item}  cantidad={cantIngresar} pathDestino={'/cart'} textoBoton={'Terminar Compra ' + cantIngresar + ' items' }></MyButton>:
-                         <ItemCount initial={1} stock={item.stock} onAdd={addHandler} />
-                    }
+                   
+                    <MyButton item={item}  cantidad={cantidadEnCarrito} pathDestino={'/cart'} textoBoton={'Terminar Compra ' + cantidadEnCarrito + ' items' }></MyButton>
+                    <MyButton item={item}  cantidad={cantidadEnCarrito} pathDestino={'/'} textoBoton={'Seguir comprando' }></MyButton>
+                    <ItemCount initial={1} stock={item.stock} onAdd={addHandler} />
+                    
                 </div>
             </div>
+           
         </div>
     );
 }

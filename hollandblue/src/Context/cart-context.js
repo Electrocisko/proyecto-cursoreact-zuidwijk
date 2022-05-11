@@ -11,14 +11,27 @@ export const CartContextProvider = ({children})=>{
 
     const [listaProductos, setListaProductos] = useState([]);
 
-    const addProducto = (producto)=>{
-        setListaProductos([producto,...listaProductos]);
+   
+    const addProducto = (producto) => {
+        const repeatedItemIndex = listaProductos.findIndex(item => item.id === producto.id)
+        if (repeatedItemIndex !== -1) {
+            setListaProductos(listaProductos.map(p => p.id === producto.id ? {...p, quantity: p.quantity + producto.quantity} : p));
+        } else {
+            setListaProductos([producto, ...listaProductos]);
+        }
+    }
+
+    const getCartQuantity = () => {
+        return listaProductos.reduce((total, value) => {
+            return total + value.quantity
+        }, 0)
     }
 
     return(
         <CartContext.Provider value={{
             productos: listaProductos,
-            addProducto: addProducto
+            addProducto: addProducto,
+            getCartQuantity
             }}>
             {children};
         </CartContext.Provider>
