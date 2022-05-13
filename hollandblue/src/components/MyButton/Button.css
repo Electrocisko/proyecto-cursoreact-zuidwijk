@@ -5,12 +5,12 @@
     border: solid cornflowerblue 0.5px;
     color: cornflowerblue;
     border-radius: 5px;
-    width: 100%;
+    width: 200px;
     height: 40px;
     cursor: pointer;
     font-size: medium; 
     text-decoration: none;
-    margin: 5%;
+    margin-bottom: 5%;
 }
 
 .link-personalizado{
