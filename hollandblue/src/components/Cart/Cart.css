@@ -1,0 +1,23 @@
+.lista{
+    list-style: none;
+}
+
+.remove-items{display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid cornflowerblue 0.5px;
+    color: cornflowerblue;
+    border-radius: 5px;
+    width: 300px;
+    height: 40px;
+    cursor: pointer;
+    font-size: medium; 
+    text-decoration: none;
+    margin: 5%;
+}
+
+.container-remove{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

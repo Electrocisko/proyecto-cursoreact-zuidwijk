@@ -1,5 +1,8 @@
 import React, { useContext } from 'react';
 import CartContext from '../../Context/cart-context';
+import CartItem from '../CartItem/CartItem';
+import './Cart.css'
+import MyButton from '../MyButton/MyButton';
 
 
 
@@ -12,22 +15,23 @@ function Cart(props) {
   let productosAmostrar = carrito.productos
   console.log(carrito);
 
-  productosAmostrar.forEach(element => {
-    console.log(element.title)
-  });
- 
  
     return (
         <div>
-          <h1>CART</h1>
           <h4>Cantidad de Items: {cantDeItems}</h4>
           <h4>Cantidad de Productos: {cantDeProductos}</h4>
-          <ul>
-            {productosAmostrar.map(element => <li>{element.title}s:  {element.quantity}
-            <button onClick={()=>carrito.removerPorId(element.id)}>Remover item</button></li>
+          <ul className='lista'>
+            {productosAmostrar.map(element =>
+              <li >
+                 <CartItem  item={element}/>
+              </li>
             )}
           </ul>
-          <button onClick={()=>carrito.clear()}>Vaciar Carrito</button>
+          <div className='container-remove'>
+            <button className='remove-items' onClick={()=>carrito.clear()}>Vaciar Carrito</button>
+          </div>
+         
+        
         </div>
     );
 }
