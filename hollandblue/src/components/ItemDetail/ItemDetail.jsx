@@ -46,7 +46,7 @@ function ItemDetail({item}) {
                 <div className='contenedor-detail-texto'>
                     <h1 className='detail-titel'>{item.title}</h1>
                     <div className='detail-price'>
-                        <h3 className='price'>{item.price}</h3>
+                        <h3 className='price'>${item.price} AR </h3>
                     </div>
                     <div className='detail-texto-data' >
                         <p>{item.description}</p>

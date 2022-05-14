@@ -8,9 +8,7 @@ import CartContext from '../../Context/cart-context'
 
 function MyButton({pathDestino,textoBoton,item,cantidad }) {
 
-    const {addProducto, getCartQuantity } = useContext(CartContext);
 
-   console.log(getCartQuantity())
 
 
     return (

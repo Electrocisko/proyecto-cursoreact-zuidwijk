@@ -17,7 +17,7 @@ function CartItem({item}) {
                 <p className='producto__cart__quantity'>{item.quantity} u</p>
             </div>
             <div className='container-cart-precio'>
-                <p className='producto__cart__precio'>{item.price}</p>
+                <p className='producto__cart__precio'>${item.price}</p>
             </div>    
         </div>
     );

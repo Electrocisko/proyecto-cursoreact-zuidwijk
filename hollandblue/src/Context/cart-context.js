@@ -27,7 +27,6 @@ export const CartContextProvider = ({children})=>{
         }, 0)
     }
 
-
     const clear = () => {
         setListaProductos([]);
         //Este lo hago para que reinicie el stock original, porque si bien vacia el carrito, el stock que fui descontando queda igual.
@@ -35,8 +34,12 @@ export const CartContextProvider = ({children})=>{
     }
 
     const removerPorId = (id)=> {
-        listaProductos(listaProductos.filter((item) => item.id !== id));
-      }
+        setListaProductos(listaProductos.filter(element => element.id !== id));
+    }
+
+    const removerPorUnidad = (id)=>{
+        setListaProductos(listaProductos.filter(element => element.id !== id));
+    }
 
     const isInCart = (id) => {
         listaProductos.find((element)=>element.id === id);
@@ -49,7 +52,8 @@ export const CartContextProvider = ({children})=>{
             getCartQuantity,
             clear,
             removerPorId,
-            isInCart
+            isInCart,
+            removerPorUnidad
 
             }}>
             {children};
