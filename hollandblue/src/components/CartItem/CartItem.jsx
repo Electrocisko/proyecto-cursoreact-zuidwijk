@@ -27,6 +27,9 @@ function CartItem({item}) {
             <div>
                <button onClick={()=>productsInCart.removeOneUnit(item.id)}>-</button>
             </div>
+            <div>
+                <button onClick={()=>productsInCart.addOneUnit(item)}>+</button>
+            </div>
         </div>
     );
 }

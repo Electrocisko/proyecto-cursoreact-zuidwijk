@@ -61,7 +61,9 @@ export const CartContextProvider = ({children})=>{
         );
       };
 
-
+       const addOneUnit = (producto) => {
+        setListaProductos(listaProductos.map(p => p.id === producto.id ? {...p, quantity: p.quantity + 1} : p));
+      };  
 
 
     return(
@@ -74,7 +76,8 @@ export const CartContextProvider = ({children})=>{
             isInCart,
             removerPorUnidad,
             unitsPerProduct,
-            removeOneUnit
+            removeOneUnit,
+            addOneUnit
 
             }}>
             {children};
