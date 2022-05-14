@@ -19,7 +19,7 @@ function CartItem({item}) {
                 <p className='producto__cart__quantity'>{item.quantity} u</p>
             </div>
             <div className='container-cart-precio'>
-                <p className='producto__cart__precio'>${item.price}</p>
+                <p className='producto__cart__precio'>${item.price * item.quantity} </p>
             </div>  
             <div>
                 <button className='remove-button' onClick={()=>productsInCart.removerPorId(item.id)}><i className="fa-solid fa-trash"></i></button>

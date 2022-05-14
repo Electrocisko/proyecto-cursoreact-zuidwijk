@@ -35,10 +35,7 @@ export const CartContextProvider = ({children})=>{
         setListaProductos(listaProductos.filter(element => element.id !== id));
     }
 
-    const removerPorUnidad = (id)=>{
-        setListaProductos(listaProductos.filter(element => element.id !== id));
-    }
-
+    
     const isInCart = (id) => {
         listaProductos.find((element)=>element.id === id);
     }
@@ -65,6 +62,9 @@ export const CartContextProvider = ({children})=>{
         setListaProductos(listaProductos.map(p => p.id === producto.id ? {...p, quantity: p.quantity + 1} : p));
       };  
 
+      
+
+
 
     return(
         <CartContext.Provider value={{
@@ -74,7 +74,6 @@ export const CartContextProvider = ({children})=>{
             clear,
             removerPorId,
             isInCart,
-            removerPorUnidad,
             unitsPerProduct,
             removeOneUnit,
             addOneUnit
