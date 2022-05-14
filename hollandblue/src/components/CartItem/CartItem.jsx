@@ -1,10 +1,12 @@
-import React from 'react';
-import productos from '../../Assets/Productos/Productos';
+import React, { useContext } from 'react';
 import './CartItem.css'
+import CartContext from '../../Context/cart-context';
+
 
 function CartItem({item}) {
 
- 
+    const productsInCart = useContext(CartContext)
+    
     return (
         <div className='cart-container'>
            <div className='container-cart-img'>
@@ -18,7 +20,10 @@ function CartItem({item}) {
             </div>
             <div className='container-cart-precio'>
                 <p className='producto__cart__precio'>${item.price}</p>
-            </div>    
+            </div>  
+            <div>
+                <button onClick={()=>productsInCart.removerPorId(item.id)}>Remover</button>
+            </div>  
         </div>
     );
 }

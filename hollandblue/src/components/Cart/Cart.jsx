@@ -5,8 +5,6 @@ import './Cart.css'
 import MyButton from '../MyButton/MyButton';
 
 
-
-
 function Cart(props) {
 
   const carrito = useContext(CartContext)
