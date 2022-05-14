@@ -32,3 +32,9 @@
     justify-content:right;
     width: 150px;
 }
+
+.remove-button{
+    padding: 5px;
+    margin: 5px;
+    color: blue;
+}

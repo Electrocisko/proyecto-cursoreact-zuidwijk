@@ -22,7 +22,7 @@ function CartItem({item}) {
                 <p className='producto__cart__precio'>${item.price}</p>
             </div>  
             <div>
-                <button onClick={()=>productsInCart.removerPorId(item.id)}>Remover</button>
+                <button className='remove-button' onClick={()=>productsInCart.removerPorId(item.id)}><i className="fa-solid fa-trash"></i></button>
             </div>  
         </div>
     );
