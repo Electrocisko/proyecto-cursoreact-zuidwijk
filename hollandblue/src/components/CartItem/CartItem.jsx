@@ -24,6 +24,9 @@ function CartItem({item}) {
             <div>
                 <button className='remove-button' onClick={()=>productsInCart.removerPorId(item.id)}><i className="fa-solid fa-trash"></i></button>
             </div>  
+            <div>
+               <button onClick={()=>productsInCart.removeOneUnit(item.id)}>-</button>
+            </div>
         </div>
     );
 }

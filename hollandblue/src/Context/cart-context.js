@@ -43,6 +43,27 @@ export const CartContextProvider = ({children})=>{
         listaProductos.find((element)=>element.id === id);
     }
 
+    const unitsPerProduct = (id) => {
+        const foundInCart = listaProductos.find((item) => item.id === id);
+        return foundInCart ? foundInCart.quantity : 0;
+      };
+
+      const removeOneUnit = (id) => {
+        if (unitsPerProduct(id) === 1) {
+          return removerPorId(id);
+        }
+        setListaProductos(
+            listaProductos.map((product) =>
+            product.id === id
+              ? { ...product, quantity: product.quantity - 1 }
+              : product
+          )
+        );
+      };
+
+
+
+
     return(
         <CartContext.Provider value={{
             productos: listaProductos,
@@ -51,7 +72,9 @@ export const CartContextProvider = ({children})=>{
             clear,
             removerPorId,
             isInCart,
-            removerPorUnidad
+            removerPorUnidad,
+            unitsPerProduct,
+            removeOneUnit
 
             }}>
             {children};
