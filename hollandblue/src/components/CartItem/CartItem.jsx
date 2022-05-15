@@ -16,20 +16,18 @@ function CartItem({item}) {
                 <h4 className='producto__cart__title'>{item.title}</h4>
             </div>
            <div className='container-cart-quantity'>
-                <p className='producto__cart__quantity'>{item.quantity} u</p>
+                <button className='cart-button' onClick={()=>productsInCart.removeOneUnit(item.id)}><i className="fa-solid fa-minus"></i></button>
+                <p className='producto__cart__quantity'>{item.quantity} U</p>
+                <button className='cart-button' onClick={()=>productsInCart.addOneUnit(item)}><i className="fa-solid fa-plus"></i></button>
+                
             </div>
             <div className='container-cart-precio'>
-                <p className='producto__cart__precio'>${item.price * item.quantity} </p>
+                <p className='producto__cart__precio'>${(item.price * item.quantity).toLocaleString()} </p>
             </div>  
-            <div>
-                <button className='remove-button' onClick={()=>productsInCart.removerPorId(item.id)}><i className="fa-solid fa-trash"></i></button>
+            <div className='container-trash'>
+                <button className='cart-button' onClick={()=>productsInCart.removerPorId(item.id)}><i className="fa-solid fa-trash"></i></button>
             </div>  
-            <div>
-               <button onClick={()=>productsInCart.removeOneUnit(item.id)}>-</button>
-            </div>
-            <div>
-                <button onClick={()=>productsInCart.addOneUnit(item)}>+</button>
-            </div>
+          
         </div>
     );
 }

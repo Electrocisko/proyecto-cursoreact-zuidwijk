@@ -3,12 +3,13 @@ import CartContext from '../../Context/cart-context';
 import CartItem from '../CartItem/CartItem';
 import './Cart.css'
 import MyButton from '../MyButton/MyButton';
+import HomePage from '../../Pages/HomePage';
+import { Link } from 'react-router-dom';
 
 
 function Cart(props) {
 
   const carrito = useContext(CartContext)
-
   let cantDeItems = carrito.productos.length;
   let cantDeProductos = carrito.getCartQuantity();
   let productosAmostrar = carrito.productos;
@@ -16,16 +17,20 @@ function Cart(props) {
   
   if(cantDeItems > 0){
       return (
+        <>
         <div>
+          {productosAmostrar.map((el, i) =><CartItem  item={el} key={i}/>)}
+        </div>
+        <div className='container-info-cart'>
           <h4>Cantidad de Items: {cantDeItems}</h4>
           <h4>Cantidad de Productos: {cantDeProductos}</h4>
-          <h4>Precio Total: ${precioTotal}</h4>
-            {productosAmostrar.map((el, i) =><CartItem  item={el} key={i}/>)}
-          <div className='container-remove'>
-            <button className='remove-items' onClick={()=>carrito.clear()}>Vaciar Carrito</button>
-            <MyButton    pathDestino={'/'} textoBoton={'Seguir Comprando ' }></MyButton>
-          </div>
+          <h4>Precio Total: ${precioTotal.toLocaleString()}</h4>
         </div>
+        <div className='container-remove'>
+            <button className='remove-items' onClick={()=>carrito.clear()}>Vaciar Carrito</button>
+           <Link className='link' to='/'><button className='remove-items'>Seguir Comprando</button></Link> 
+        </div>
+        </>
     );
   }
   else{

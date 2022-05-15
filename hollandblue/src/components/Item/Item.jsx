@@ -11,7 +11,7 @@ function Item({item}) {
                 <Link className='link' to={'/item/' + item.id} > <h3 className='productos__card__title'>{item.title}</h3></Link>
                 <Link to={'/item/' + item.id} > <img src={item.pictureUrl} alt={item.title} width="100%" className='card__img'/></Link> 
                 <p className='productos__description'>{item.description}</p>  
-                <p className='productos__card__precio'>${item.price} AR</p>            
+                <p className='productos__card__precio'>${item.price}</p>            
             </div>
         </div>
     );

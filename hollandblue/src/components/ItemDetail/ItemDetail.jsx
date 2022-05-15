@@ -30,10 +30,10 @@ function ItemDetail({item}) {
         mostrartBoton = <ItemCount initial={0} stock={item.stock} onAdd={addHandler} /> 
       } else {
         mostrartBoton = 
-        <>
-        <MyButton item={item}  cantidad={cantidadEnCarrito} pathDestino={'/cart'} textoBoton={'Terminar Compra ' + cantidadEnCarrito + ' items' }></MyButton>
-        <MyButton item={item}  cantidad={cantidadEnCarrito} pathDestino={'/'} textoBoton={'Seguir comprando' }></MyButton>
-        </>
+        <div className='container-button-itemdetail'>
+            <MyButton item={item}  cantidad={cantidadEnCarrito} pathDestino={'/cart'} textoBoton={'Terminar Compra ' + cantidadEnCarrito + ' U' }></MyButton>
+            <MyButton item={item}  cantidad={cantidadEnCarrito} pathDestino={'/'} textoBoton={'Seguir comprando' }></MyButton>
+        </div>
       }
 
   
@@ -46,7 +46,7 @@ function ItemDetail({item}) {
                 <div className='contenedor-detail-texto'>
                     <h1 className='detail-titel'>{item.title}</h1>
                     <div className='detail-price'>
-                        <h3 className='price'>${item.price} AR </h3>
+                        <h3 className='price'>${item.price}</h3>
                     </div>
                     <div className='detail-texto-data' >
                         <p>{item.description}</p>
@@ -59,14 +59,5 @@ function ItemDetail({item}) {
                 </div>
             </div>)
     }
-    
-                      
-           
-    
-
-
-
-   
-
 
 export default ItemDetail;
