@@ -63,6 +63,11 @@ export const CartContextProvider = ({children})=>{
       };  
 
       
+      const getTotalPrice = () => {
+        return listaProductos.reduce((total, el) => {
+            return total + (el.quantity * el.price);
+        }, 0)
+    }
 
 
 
@@ -76,7 +81,8 @@ export const CartContextProvider = ({children})=>{
             isInCart,
             unitsPerProduct,
             removeOneUnit,
-            addOneUnit
+            addOneUnit,
+            getTotalPrice
 
             }}>
             {children};

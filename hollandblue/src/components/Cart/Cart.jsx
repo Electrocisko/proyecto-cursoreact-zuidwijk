@@ -11,13 +11,15 @@ function Cart(props) {
 
   let cantDeItems = carrito.productos.length;
   let cantDeProductos = carrito.getCartQuantity();
-  let productosAmostrar = carrito.productos
+  let productosAmostrar = carrito.productos;
+  let precioTotal = carrito.getTotalPrice();
   
   if(cantDeItems > 0){
       return (
         <div>
           <h4>Cantidad de Items: {cantDeItems}</h4>
           <h4>Cantidad de Productos: {cantDeProductos}</h4>
+          <h4>Precio Total: ${precioTotal}</h4>
             {productosAmostrar.map((el, i) =><CartItem  item={el} key={i}/>)}
           <div className='container-remove'>
             <button className='remove-items' onClick={()=>carrito.clear()}>Vaciar Carrito</button>
