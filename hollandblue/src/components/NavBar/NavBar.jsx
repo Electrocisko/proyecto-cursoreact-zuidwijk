@@ -1,13 +1,15 @@
-import React from 'react';
+import React, {  useContext } from 'react';
 import './NavBar.css';
 import CartWidget from '../CartWidget/CartWidget';
 import molino from './imagenes/molino.png';
 import {Link} from 'react-router-dom';
+import CartContext from '../../Context/cart-context';
 
 
 function NavBar(props) {
 
-
+    const cart = useContext(CartContext);
+    const itemsCart = cart.getCartQuantity();
 
     
     return (
@@ -27,7 +29,8 @@ function NavBar(props) {
                     </ul>
                   </li>
                   <li className="menu__item"><a href="#" className="menu__link">Contacto</a></li>
-                  <span className='icono-carrito'> <Link className='carrito-navbar' to={'/cart'}><CartWidget cant={0}/></Link></span>
+                  {itemsCart > 0 && <span className='icono-carrito'> <Link className='carrito-navbar' to={'/cart'}><CartWidget cant={0}/></Link></span> }
+                  
             </ul>
         </nav>
         </>
