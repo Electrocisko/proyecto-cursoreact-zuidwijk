@@ -1,5 +1,5 @@
 import React, {  useContext } from 'react';
-import './NavBar.css';
+import './NavBarResponsive.css';
 import CartWidget from '../CartWidget/CartWidget';
 import molino from './imagenes/molino.png';
 import {Link} from 'react-router-dom';

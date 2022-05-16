@@ -1,0 +1,106 @@
+.nav-bar{
+    display: none;
+}
+
+.menu{
+    margin-left: 0;
+    display: flex;
+    
+}
+
+.menu__link{
+    display: block;
+    padding: 1rem;
+    color: white;
+    text-decoration: none;
+}
+
+.menu, .submenu{
+    list-style:none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu__link:hover{
+    background: #1976D2;
+}
+
+.submenu{
+    height: 0;
+    overflow: hidden;
+    transition: all 0.3s;
+}
+
+.submenu .menu__link:hover{
+    background: #0D47A1;
+}
+
+.submenu .menu__link{
+    background: #1565C0;
+    padding-left: 40px;
+}
+.mostrar{
+    margin-left: 0;
+}
+.link-active{
+    display: block;
+    padding: 1rem;
+    color: blue;
+    text-decoration: none;
+}
+
+.container-submenu{
+    position: relative;
+}
+
+.submenu{
+    position: absolute;
+    top: 60px;
+    width: 200px;
+    overflow: visible;
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.container-submenu:hover .submenu{
+    opacity: 1;
+    visibility: visible;
+}
+
+.main-nav{
+    position: relative;
+}
+
+.carrito-navbar{
+    text-decoration: none;
+    color:white;
+}
+
+.icono-carrito{
+    color: white;
+    position: absolute;
+    right: 5%;
+    top:15px;
+}
+
+#icono-logo{
+    position: inline block;
+    padding-top: 8px ;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.link-navbar{
+    line-height: 40px;
+    text-decoration: none;
+    color: black;
+}
+    
+.menu{
+    background: #2196F3;
+    width: 100%;
+    margin-left: 0%;
+    transition: all 0.5s;
+}
+

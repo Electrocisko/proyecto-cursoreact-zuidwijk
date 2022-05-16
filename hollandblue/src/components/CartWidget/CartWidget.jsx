@@ -5,10 +5,9 @@ import CartContext from '../../Context/cart-context';
 
 const CartWidget = (props) => {
 
-    const {productos} = useContext(CartContext)
     const cartCtx = useContext(CartContext);
 
-   let cantEnCarrito = cartCtx.getCartQuantity()
+    let cantEnCarrito = cartCtx.getCartQuantity()
 
     return (
        
@@ -16,7 +15,6 @@ const CartWidget = (props) => {
                 <i className="fa-solid fa-cart-shopping fa-2x"></i>
                 <span>{cantEnCarrito}</span>
             </div>
-        
     );  
 };
 

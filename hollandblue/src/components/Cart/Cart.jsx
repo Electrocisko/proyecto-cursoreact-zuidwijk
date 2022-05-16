@@ -3,7 +3,6 @@ import CartContext from '../../Context/cart-context';
 import CartItem from '../CartItem/CartItem';
 import './Cart.css'
 import MyButton from '../MyButton/MyButton';
-import HomePage from '../../Pages/HomePage';
 import { Link } from 'react-router-dom';
 
 

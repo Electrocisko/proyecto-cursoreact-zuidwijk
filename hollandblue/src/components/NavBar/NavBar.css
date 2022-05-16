@@ -13,11 +13,7 @@
     width: 100%;
 }
 
-.menu, .submenu{
-    list-style:none;
-    padding: 0;
-    margin: 0;
-}
+
 
 .menu{
     background: #2196F3;
@@ -33,24 +29,14 @@
     text-decoration: none;
 }
 
-.menu__link:hover{
-    background: #1976D2;
-}
 
 .logo{
    width: 20px;
     height: 20px;
 }
 
-.submenu{
-    height: 0;
-    overflow: hidden;
-    transition: all 0.3s;
-}
 
-.submenu .menu__link:hover{
-    background: #0D47A1;
-}
+
 
 .submenu .menu__link{
     background: #1565C0;
@@ -61,72 +47,20 @@
     margin-left: 0;
 }
 
-#icono-logo{
-    position: inline block;
-    padding-top: 8px ;
-    padding-left: 5px;
-    padding-right: 5px;
-}
 
 
-.icono-carrito{
-    color: antiquewhite;
-    position: absolute;
-    right: 5%;
-    top:15px;
-}
-
-.link-navbar{
-    line-height: 40px;
-    text-decoration: none;
-    color: black;
-}
-
-.link-active{
-    display: block;
-    padding: 1rem;
-    color: blue;
-    text-decoration: none;
-}
-
-.carrito-navbar{
-    text-decoration: none;
-    color: antiquewhite;
-}
 
 
-/* .menu__item{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-} */
+
+
+
+
+
+
 
 @media(min-width:1024px){
-    .nav-bar{
-        display: none;
-    }
-    .menu{
-        margin-left: 0;
-        display: flex;
-        
-    }
+ 
 
-    .container-submenu{
-        position: relative;
-    }
 
-    .submenu{
-        position: absolute;
-        top: 60px;
-        width: 200px;
-        overflow: visible;
-        z-index: 100;
-        opacity: 0;
-        visibility: hidden;
-    }
-
-    .container-submenu:hover .submenu{
-        opacity: 1;
-        visibility: visible;
-    }
+ 
 }
