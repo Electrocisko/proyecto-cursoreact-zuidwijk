@@ -1,7 +1,5 @@
 import React, { useContext } from 'react';
 import CartContext from '../../Context/cart-context';
-import {Link} from 'react-router-dom';
-
 
 
 
@@ -10,9 +8,6 @@ const CartWidget = (props) => {
     const {productos} = useContext(CartContext)
     const cartCtx = useContext(CartContext);
 
-   console.log(`cart ${productos.length}`)
-   console.log(productos)
-   
    let cantEnCarrito = cartCtx.getCartQuantity()
 
     return (

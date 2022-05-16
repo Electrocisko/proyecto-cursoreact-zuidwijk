@@ -23,9 +23,9 @@ function NavBar(props) {
                   <li className="menu__item container-submenu">
                     <Link to='/' className="menu__link submenu-btn" id="productos">Productos <i className="fas fa-chevron-down"></i> </Link>
                     <ul className="submenu" id="sub-productos">
-                        <li className="menu__item"><Link className='menu__link' to={'/category/adornos'}>Adornos</Link></li>
-                        <li className="menu__item"><Link className='menu__link' to={'/category/azulejos'}>Azulejos</Link></li>
-                        <li className="menu__item"><Link className='menu__link' to={'/category/vajillas'}>Vajillas</Link></li>
+                        <li className="menu__item"><Link className='menu__link' to={'/category/Adornos'}>Adornos</Link></li>
+                        <li className="menu__item"><Link className='menu__link' to={'/category/Azulejos'}>Azulejos</Link></li>
+                        <li className="menu__item"><Link className='menu__link' to={'/category/Vajillas'}>Vajillas</Link></li>
                     </ul>
                   </li>
                   <li className="menu__item"><a href="#" className="menu__link">Contacto</a></li>

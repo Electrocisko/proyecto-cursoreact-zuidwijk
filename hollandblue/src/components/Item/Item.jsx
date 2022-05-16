@@ -4,9 +4,6 @@ import { Link } from 'react-router-dom';
 
 function Item({item}) {
 
-
-    console.log(`Item ${item.title}`);
-
     //A la imagen y titulo le agregue un Link para ver el detalle
     return (    
         <div className='productos'>
