@@ -14,7 +14,7 @@ function ItemDetail({item}) {
     let cantidadEnCarrito = cartCtx.getCartQuantity();
     let mostrartBoton;
 
-  
+    console.log(`ItemDetail : ${item.title}`)
 
     //Cuando ingreso un producto seguirComprando es falso, pero habilito otro boton para cambiar su estado para seguir comprando
     function addHandler(cantIngresar) {
