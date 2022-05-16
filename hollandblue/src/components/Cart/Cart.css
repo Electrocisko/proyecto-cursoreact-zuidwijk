@@ -2,7 +2,8 @@
     list-style: none;
 }
 
-.remove-items{display: flex;
+.remove-items{
+    display: flex;
     align-items: center;
     justify-content: center;
     border: solid cornflowerblue 0.5px;
@@ -26,3 +27,6 @@
 .link{
     text-decoration: none;
 }
+
+
+

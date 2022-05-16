@@ -29,6 +29,7 @@ function Cart(props) {
         <div className='container-remove'>
             <button className='remove-items' onClick={()=>carrito.clear()}>Vaciar Carrito</button>
            <Link className='link' to='/'><button className='remove-items'>Seguir Comprando</button></Link> 
+           <button className='remove-items'>Terminar Compra</button>
         </div>
         </>
     );

@@ -31,8 +31,8 @@ function ItemDetail({item}) {
       } else {
         mostrartBoton = 
         <div className='container-button-itemdetail'>
-            <MyButton item={item}  cantidad={cantidadEnCarrito} pathDestino={'/cart'} textoBoton={'Terminar Compra ' + cantidadEnCarrito + ' U' }></MyButton>
             <MyButton item={item}  cantidad={cantidadEnCarrito} pathDestino={'/'} textoBoton={'Seguir comprando' }></MyButton>
+            <MyButton item={item}  cantidad={cantidadEnCarrito} pathDestino={'/cart'} textoBoton={'Terminar Compra ' + cantidadEnCarrito + ' U' }></MyButton>
         </div>
       }
 

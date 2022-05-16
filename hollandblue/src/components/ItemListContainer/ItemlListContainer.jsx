@@ -3,6 +3,7 @@ import './ItemListContainer.css'
 import ItemList from '../ItemList/ItemList';
 import {useParams } from 'react-router-dom';
 import productos from '../../Assets/Productos/Productos';
+import {collection, getDocs, getFirestore, query, where, limit } from 'firebase/firestore'
 
 
 function ItemlListContainer(props) {
@@ -18,7 +19,24 @@ function ItemlListContainer(props) {
     const [items,setItem] = useState([]);  
  
     useEffect(()=>{
-        setItem(listaProductos);
+        // setItem(listaProductos);
+        const db = getFirestore();
+        const itemsCollection = collection(db, 'items')
+        const q = query( itemsCollection , where('price', '<=',900),limit(5));
+
+        getDocs(q)
+        .then(snapshot =>{
+            console.log(snapshot.docs.map(doc => {
+                 return { ...doc.data(), id: doc.id}
+                }));
+        })
+        .catch(
+            err=>{
+                console.log(err)
+            }
+        )
+
+
     },[id])
 
     return (
