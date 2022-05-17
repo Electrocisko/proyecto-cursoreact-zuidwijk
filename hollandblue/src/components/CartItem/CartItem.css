@@ -2,7 +2,7 @@
     border: solid 1px lightblue;
     display: flex;
     justify-content: space-around;
-   margin: 10px 50px;
+    margin: 10px 50px;
 }
 
 .container-cart-img{
@@ -58,3 +58,28 @@
     align-items: center;
     justify-content: space-between;
 }
+
+
+
+@media(max-width:800px){
+
+    .cart-container{
+       margin: 0px;
+    }
+
+    .container-cart-img{
+        display: none;
+    }
+
+    .container-cart-precio{
+        justify-content:center;
+    }
+
+    .container-trash{
+      margin-right: 10px;
+    }
+    
+}
+
+
+

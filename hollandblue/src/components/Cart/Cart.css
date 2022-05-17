@@ -29,4 +29,16 @@
 }
 
 
+@media(max-width:800px){
 
+    .container-info-cart{
+        display: flex;
+        flex-direction: column;
+        margin: 0%;
+    }
+
+    .container-remove{
+        flex-direction: column;
+    }
+
+}

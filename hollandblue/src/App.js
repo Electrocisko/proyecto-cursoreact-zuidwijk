@@ -5,6 +5,7 @@ import HomePage from './Pages/HomePage';
 import CategoryPage from './Pages/CategoryPage';
 import ItemPage from './Pages/ItemPage';
 import CartPage from './Pages/CartPage';
+import AboutPage from './Pages/AboutPage';
 
 
 
@@ -18,6 +19,7 @@ function App() {
           <Route path='/category/:id' element={<CategoryPage/>}/>
           <Route path='/item/:id' element={<ItemPage/>}/>
           <Route path='/cart' element = {<CartPage/>}/>
+          <Route path='/about' element ={<AboutPage/>}/>
           <Route path='*' element={<Navigate replace to='/'/>}/>
         </Routes>
     </div>

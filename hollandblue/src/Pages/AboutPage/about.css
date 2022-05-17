@@ -1,0 +1,11 @@
+.container-text-about{
+   
+    margin: 20px 60px;   
+}
+
+.text-about{
+    padding: 5px;
+    font-style: italic;
+    font-size: 20px;
+    text-align: justify;
+}
