@@ -40,3 +40,39 @@ display: inline-block;
  text-align: center;
  font-weight: normal;
 }
+
+.img-detail-responsive{
+    display: none;
+}
+
+@media(max-width:800px){
+ 
+    .contenedor-img-detail{
+        display: none;
+    }
+    
+    .img-detail-responsive{
+        display: block;
+        width: 200px;
+    }
+    
+    .contenedor-detail-texto{
+        padding-left: 0%;
+    }
+ 
+    .detail-titel{
+        font-family: 'MonteCarlo', cursive;
+        color:#857650;
+        font-weight:normal;
+        font-size: 45px;
+       margin: 0%;
+    }
+    
+    .detail-price{
+        display: flex;
+        }
+
+    .price{
+        font-size: 20px;
+    }
+}

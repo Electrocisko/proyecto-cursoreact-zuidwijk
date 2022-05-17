@@ -19,7 +19,7 @@ function NavBar(props) {
         <nav className="main-nav">
             <ul className="menu" id="menu">
                   <li className="menu__item"><Link className='link-navbar' to={'/'}><img id='icono-logo' src={molino} alt="" /></Link></li>
-                  <li className="menu__item"><Link className='menu__link' to={'/'}>Holland Blue</Link></li>
+                  <li className="menu__item" ><Link id='navbar-brand' className='menu__link' to={'/'}>Holland Blue</Link></li>
                   <li className="menu__item container-submenu">
                     <Link to='/' className="menu__link submenu-btn" id="productos">Productos <i className="fas fa-chevron-down"></i> </Link>
                     <ul className="submenu" id="sub-productos">

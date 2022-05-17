@@ -45,12 +45,15 @@ function ItemDetail({item}) {
                     <h1 className='detail-titel'>{item.title}</h1>
                     <div className='detail-price'>
                         <h3 className='price'>${item.price}</h3>
+                        <img className='img-detail-responsive' src={item.pictureUrl} ></img>
                     </div>
                     <div className='detail-texto-data' >
                         <p>{item.description}</p>
                         <p>{item.measures}</p>
                         <p>{item.weight}</p>
                     </div>
+
+                    
                     <div >
                        {mostrartBoton}  
                     </div>
