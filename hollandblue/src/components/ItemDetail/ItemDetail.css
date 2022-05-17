@@ -64,7 +64,7 @@ display: inline-block;
         font-family: 'MonteCarlo', cursive;
         color:#857650;
         font-weight:normal;
-        font-size: 45px;
+        font-size: 35px;
        margin: 0%;
     }
     
@@ -74,5 +74,13 @@ display: inline-block;
 
     .price{
         font-size: 20px;
+    }
+
+    .detail-texto-data{
+        font-size: 1rem;
+    }
+
+    .container-button-itemdetail{
+        flex-direction: column;
     }
 }

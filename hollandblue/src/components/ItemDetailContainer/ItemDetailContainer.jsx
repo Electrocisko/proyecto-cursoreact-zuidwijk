@@ -21,7 +21,7 @@ function ItemDetailContainer(props) {
                 console.log(err)
             }
         )
-    },[])
+    },[productoAmostrar])
 
  
     return (

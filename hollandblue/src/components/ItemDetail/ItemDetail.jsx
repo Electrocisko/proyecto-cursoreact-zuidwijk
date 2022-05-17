@@ -38,16 +38,16 @@ function ItemDetail({item}) {
         return (
             <div className='contenedor-detail'>
                 <div className='contenedor-img-detail'>
-                    <img className='img-detail' src={item.pictureUrl} ></img>
+                    <img className='img-detail' src={item.pictureUrl} alt={item.title} ></img>
                 </div>
     
                 <div className='contenedor-detail-texto'>
                     <h1 className='detail-titel'>{item.title}</h1>
                     <div className='detail-price'>
                         <h3 className='price'>${item.price}</h3>
-                        <img className='img-detail-responsive' src={item.pictureUrl} ></img>
+                        <img className='img-detail-responsive' src={item.pictureUrl} alt={item.title} ></img>
                     </div>
-                    <div className='detail-texto-data' >
+                    <div className='detail-texto-data'>
                         <p>{item.description}</p>
                         <p>{item.measures}</p>
                         <p>{item.weight}</p>
