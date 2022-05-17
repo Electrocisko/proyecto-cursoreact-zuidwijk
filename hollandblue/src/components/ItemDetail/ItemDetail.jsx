@@ -33,7 +33,7 @@ function ItemDetail({item}) {
             <MyButton item={item}  cantidad={cantidadEnCarrito} pathDestino={'/cart'} textoBoton={'Terminar Compra ' + cantidadEnCarrito + ' U' }></MyButton>
         </div>
       }
-
+ 
   
         return (
             <div className='contenedor-detail'>
