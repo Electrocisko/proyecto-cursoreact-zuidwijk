@@ -8,6 +8,10 @@
     flex-wrap: wrap;
 }
 
-h3{
-    color: blue;
+
+
+.cat-title{
+    color: #857650;
+    font-size: 30px;
+    font-family: 'MonteCarlo', cursive;
 }

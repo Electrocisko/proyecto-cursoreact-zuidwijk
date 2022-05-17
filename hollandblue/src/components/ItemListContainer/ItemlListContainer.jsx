@@ -42,7 +42,7 @@ function ItemlListContainer(props) {
 
     return (
         <>
-        <h3>{categoria}</h3>
+        <h3 className='cat-title'>{categoria}</h3>
         <div className='contenedor__productos'>
             <ItemList items={items} category={categoria}/>
         </div>

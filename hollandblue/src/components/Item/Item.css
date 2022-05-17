@@ -10,10 +10,11 @@
 }
 
 .productos__card__title{
-    color: blue;
+    color: black;
     font-size:large;
     margin: 0%;
     text-decoration: none;
+    font-style: italic;
   
 }
 
