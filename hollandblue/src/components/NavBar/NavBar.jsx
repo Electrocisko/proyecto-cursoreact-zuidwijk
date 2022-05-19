@@ -29,7 +29,7 @@ function NavBar(props) {
                     </ul>
                   </li>
                   <li className="menu__item"><a href="#" className="menu__link">Contacto</a></li>
-                  {itemsCart > 0 && <span className='icono-carrito'> <Link className='carrito-navbar' to={'/cart'}><CartWidget cant={0}/></Link></span> }
+                  <span className='icono-carrito'> <Link className='carrito-navbar' to={'/cart'}><CartWidget cant={0}/></Link></span>
                   
             </ul>
         </nav>

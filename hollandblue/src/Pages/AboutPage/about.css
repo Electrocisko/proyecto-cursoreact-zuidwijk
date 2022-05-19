@@ -1,11 +1,10 @@
 .container-text-about{
-    
     margin: 20px 60px;   
 }
 
 .text-about{
    
-    padding: 10px;
+    padding: 5px;
     font-style: italic;
     font-size: 20px;
     text-align: justify;
@@ -19,5 +18,9 @@
 }
 
 .about-img{
-    padding: 30px;
+    padding-right:  30px;
+}
+
+.img-about{
+    width: 100%;
 }

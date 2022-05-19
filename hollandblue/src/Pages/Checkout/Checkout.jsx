@@ -1,16 +1,15 @@
 import React from 'react';
-import Cart from '../../components/Cart/Cart';
 import Formulario from '../../components/Formulario/Formulario';
 import NavBar from '../../components/NavBar/NavBar';
 
-function CartPage(props) {
+function Checkout(props) {
     return (
         <div>
-            <NavBar/>
-            <Cart/>
-          
+             <NavBar/>
+            <h1>CheckOut</h1>
+            <Formulario/>
         </div>
     );
 }
 
-export default CartPage;
+export default Checkout;

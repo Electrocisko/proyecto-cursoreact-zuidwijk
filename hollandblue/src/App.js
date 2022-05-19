@@ -6,6 +6,7 @@ import CategoryPage from './Pages/CategoryPage';
 import ItemPage from './Pages/ItemPage';
 import CartPage from './Pages/CartPage';
 import AboutPage from './Pages/AboutPage';
+import Checkout from './Pages/Checkout/Checkout';
 
 
 
@@ -20,6 +21,7 @@ function App() {
           <Route path='/item/:id' element={<ItemPage/>}/>
           <Route path='/cart' element = {<CartPage/>}/>
           <Route path='/about' element ={<AboutPage/>}/>
+          <Route path='/checkout' element ={<Checkout/>}/>
           <Route path='*' element={<Navigate replace to='/'/>}/>
         </Routes>
     </div>

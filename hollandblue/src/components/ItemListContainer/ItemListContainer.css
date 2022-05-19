@@ -12,6 +12,16 @@
 
 .cat-title{
     color: #857650;
-    font-size: 30px;
+    font-size: 50px;
     font-family: 'MonteCarlo', cursive;
+}
+
+@media(max-width:1024px){
+ 
+    
+.cat-title{
+    font-size: 30px;
+    margin: 0%;
+}
+    
 }
