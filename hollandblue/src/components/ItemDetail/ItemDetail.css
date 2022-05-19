@@ -45,6 +45,14 @@ display: inline-block;
     display: none;
 }
 
+.link-arrow{
+    text-decoration: none;
+    color: blue;
+    text-align:right;
+}
+
+
+
 @media(max-width:800px){
  
     .contenedor-img-detail{

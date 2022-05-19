@@ -23,7 +23,6 @@ function ItemDetailContainer(props) {
         )
     },[productoAmostrar])
 
- 
     return (
         <div className='container-product-detail'>
             <ItemDetail item={producto}></ItemDetail>

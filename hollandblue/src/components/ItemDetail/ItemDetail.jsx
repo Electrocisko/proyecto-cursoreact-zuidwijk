@@ -3,6 +3,7 @@ import './ItemDetail.css';
 import ItemCount from '../ItemCount/ItemCount';
 import MyButton from '../MyButton/MyButton';
 import CartContext from '../../Context/cart-context';
+import { Link } from 'react-router-dom';
 
 
 function ItemDetail({item}) {
@@ -25,7 +26,11 @@ function ItemDetail({item}) {
     }
 
     if (seguirComprando) {
-        mostrartBoton = <ItemCount initial={1} stock={item.stock} onAdd={addHandler} /> 
+        mostrartBoton = <div className='container-button-continue'>
+                            <ItemCount initial={1} stock={item.stock} onAdd={addHandler} /> 
+                            <Link className='link-arrow' to='../'><i className="fa-solid fa-arrow-left fa-2x"></i></Link>
+                        </div>
+
       } else {
         mostrartBoton = 
         <div className='container-button-itemdetail'>
@@ -52,7 +57,6 @@ function ItemDetail({item}) {
                         <p>{item.measures}</p>
                         <p>{item.weight}</p>
                     </div>
-
                     
                     <div >
                        {mostrartBoton}  
@@ -62,3 +66,4 @@ function ItemDetail({item}) {
     }
 
 export default ItemDetail;
+
