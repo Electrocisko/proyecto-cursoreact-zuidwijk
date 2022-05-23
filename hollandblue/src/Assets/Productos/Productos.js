@@ -1,3 +1,4 @@
+// Este archivo lo dejo como referencia a lo que tengo en base de datos Firebase.
 
 const productos =[
     {
@@ -89,8 +90,5 @@ const productos =[
         pictureUrl:'https://royaldelft.com/wp-content/uploads/2020/12/10641900-1-scaled-300x300.jpg'
     }
 ]
-
-
-
 
 export default productos;
