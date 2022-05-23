@@ -11,6 +11,8 @@ function ItemlListContainer(props) {
     let q;
     let categoria = id;
 
+    const [load,setLoad]= useState(false);
+
     const db = getFirestore();
     const itemsCollection = collection(db, 'items')
 
@@ -25,11 +27,14 @@ function ItemlListContainer(props) {
     const [items,setItem] = useState([]);  
  
     useEffect(()=>{
+        setLoad(true);
         getDocs(q)
         .then(snapshot =>{
+            setLoad(false);
             setItem(snapshot.docs.map(doc => {
                  return { ...doc.data(), id: doc.id}
                 }));
+                
         })
         .catch(
             err=>{
@@ -40,6 +45,8 @@ function ItemlListContainer(props) {
     },[id])
 
     return (
+
+        load? <><div className='spinner'><h3>Cargando...</h3></div></>:
         <>
         <h2 className='cat-title'>{categoria}</h2>
         <div className='contenedor__productos'>

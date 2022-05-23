@@ -9,12 +9,15 @@ function ItemDetailContainer(props) {
     const[producto,setProducto] = useState([]);
     const db = getFirestore();
     const productoAmostrar = doc(db, 'items', id)
+    const [load, setLoad] = useState(true);
 
     useEffect(()=>{
        
         getDoc(productoAmostrar)
         .then(snapshot =>{
-            setProducto({...snapshot.data(), id: snapshot.id} )
+            setLoad(false);
+            setProducto({...snapshot.data(), id: snapshot.id} );
+           
         })
         .catch(
             err=>{
@@ -24,6 +27,7 @@ function ItemDetailContainer(props) {
     },[productoAmostrar])
 
     return (
+        load? <><div className='spinner'><h3>Cargando...</h3></div></>:
         <div className='container-product-detail'>
             <ItemDetail item={producto}></ItemDetail>
         </div>
