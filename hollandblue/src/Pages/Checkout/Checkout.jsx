@@ -1,14 +1,19 @@
-import { addDoc, collection, Firestore, getFirestore } from 'firebase/firestore';
+import { addDoc, collection, getFirestore } from 'firebase/firestore';
 import React, { useContext, useState } from 'react';
+import MyButton from '../../components/MyButton/MyButton';
 import NavBar from '../../components/NavBar/NavBar';
 import CartContext from '../../Context/cart-context';
+import './Checkout.css'
 
 
 
 function Checkout(props) {
 
-    const {productos, getTotalPrice, } = useContext(CartContext);
+ 
+
+    const {productos, getTotalPrice, unitsPerProduct } = useContext(CartContext);
     const [orderId, setOrderId] = useState();
+    const [load, setLoad] = useState(false);
 
     const [buyer, setBuyer] = useState({
         Nombre: '',
@@ -23,12 +28,19 @@ function Checkout(props) {
     };
 
     const upOrder = (data)=>{
+        setLoad(true);
         const order = data;
         const db = getFirestore();
         const ordersCollection = collection(db, 'orders')
 
         addDoc(ordersCollection,order)
-        .then(({ id }) =>setOrderId(id));
+        .then(({ id }) =>{
+            setOrderId(id); 
+            setLoad(false);
+        })
+        .catch((error)=>{
+            console.log(error)
+        })
     }
 
 
@@ -39,6 +51,7 @@ function Checkout(props) {
                 id: el.id,
                 title: el.title,
                 price: el.price,
+                amount:  unitsPerProduct(el.id) 
             }
         })
         const buyDate = new Date();
@@ -47,22 +60,41 @@ function Checkout(props) {
         upOrder(data);
     }
 
-    
 
+    let formPurchase = <form className='form-container' onSubmit={handleSubmit}>
+                            <input className='form-input' type='text' placeholder='Nombre' name='Nombre' value={nombre} onChange={handleInputChange}/>
+                            <input className='form-input' type="tel" name="Telefono" id="" placeholder='Número de teléfono' value={telefono} onChange={handleInputChange}/>
+                            <input className='form-input' type="email" name="Email" id="" placeholder='E-mail' value={email} onChange={handleInputChange}/>
+                            <input className='form-input' type="submit" value="Enviar" />
+                        </form>
 
+        if( orderId){
+            return(
+                    <>
+                    <NavBar/>
+                    <div className='finished-container'>
+                        <h3>Gracias por su compra</h3>
+                        <p>A la brevedad nos estamos contactando para coordinar pago y envio</p>
+                        <p><strong>Orden de compra: {orderId}</strong></p>
+                        <MyButton textoBoton='Volver a comprar' pathDestino='../'/> 
+                    </div>
+                    </>
+            )
+        }
+        else {
 
-    return (
-        <div>
-             <NavBar/>
-            <h1>CheckOut</h1>
-            <form className='form-container' onSubmit={handleSubmit}>
-                <input className='form-input' type='text' placeholder='Nombre' name='Nombre' value={nombre} onChange={handleInputChange}/>
-                <input className='form-input' type="tel" name="Telefono" id="" placeholder='Número de teléfono' value={telefono} onChange={handleInputChange}/>
-                <input className='form-input' type="email" name="Email" id="" placeholder='E-mail' value={email} onChange={handleInputChange}/>
-                <input className='form-input' type="submit" value="Enviar" />
-            </form>
-        </div>
-    );
+            return(
+
+                
+                load? <><NavBar/><div className='spinner'><h3>Cargando...</h3></div></>:
+                    <>
+                    <NavBar/>
+                    <h1>CheckOut</h1>
+                    {formPurchase}
+                    </>
+            )
+        }
+
 }
-
+    
 export default Checkout;
