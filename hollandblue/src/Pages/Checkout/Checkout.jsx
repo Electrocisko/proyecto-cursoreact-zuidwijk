@@ -11,7 +11,7 @@ function Checkout(props) {
 
  
 
-    const {productos, getTotalPrice, unitsPerProduct } = useContext(CartContext);
+    const {productos, getTotalPrice, unitsPerProduct, clear } = useContext(CartContext);
     const [orderId, setOrderId] = useState();
     const [load, setLoad] = useState(false);
 
@@ -37,6 +37,7 @@ function Checkout(props) {
         .then(({ id }) =>{
             setOrderId(id); 
             setLoad(false);
+            clear();
         })
         .catch((error)=>{
             console.log(error)
@@ -73,7 +74,7 @@ function Checkout(props) {
                     <>
                     <NavBar/>
                     <div className='finished-container'>
-                        <h3>Gracias por su compra</h3>
+                        <h3>Felicitaciones por su compra!</h3>
                         <p>A la brevedad nos estamos contactando para coordinar pago y envio</p>
                         <p><strong>Orden de compra: {orderId}</strong></p>
                         <MyButton textoBoton='Volver a comprar' pathDestino='../'/> 
