@@ -20,8 +20,6 @@ function ItemlListContainer() {
           const col = await getDocs(document);
           const result = col.docs.map((doc) => doc = { id:doc.id,...doc.data()});
           setItems(result);
-          console.log(result);
-          console.log('items' ,items);
           setLoad(false);
         } catch (error) {
           console.log(error)
@@ -29,6 +27,7 @@ function ItemlListContainer() {
       }  
 
     useEffect(()=>{
+      console.log('useeffect itemlistcontainer');
         getData(id)
    },[id])
 
