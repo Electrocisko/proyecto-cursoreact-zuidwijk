@@ -3,7 +3,7 @@ import  './Button.css'
 import { Link } from 'react-router-dom';
 
 
-function MyButton({pathDestino,textoBoton,item,cantidad }) {
+function MyButton({pathDestino,textoBoton}) {
 
 
 
