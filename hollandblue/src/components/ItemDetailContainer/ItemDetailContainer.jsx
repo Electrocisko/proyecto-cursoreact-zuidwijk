@@ -8,23 +8,28 @@ function ItemDetailContainer(props) {
     const {id} = useParams();
     const[producto,setProducto] = useState([]);
     const db = getFirestore();
-    const productoAmostrar = doc(db, 'items', id)
     const [load, setLoad] = useState(true);
 
+
+    const getItem = async(idItem) =>{
+        try {
+            setLoad(true)
+            const document = doc(db, "items", idItem)
+            const response = await getDoc(document)
+            const result = {id: response.id, ...response.data()}
+            
+            setProducto(result)
+            setLoad(false)
+
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
+
     useEffect(()=>{
-       
-        getDoc(productoAmostrar)
-        .then(snapshot =>{
-            setLoad(false);
-            setProducto({...snapshot.data(), id: snapshot.id} );
-           
-        })
-        .catch(
-            err=>{
-                console.log(err)
-            }
-        )
-    },[productoAmostrar])
+       getItem(id)
+    },[id])
 
     return (
         load? <><div className='spinner'><h3>Cargando...</h3></div></>:

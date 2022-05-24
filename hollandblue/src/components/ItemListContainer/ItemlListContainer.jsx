@@ -8,50 +8,40 @@ import {collection, getDocs, getFirestore, query, where, limit } from 'firebase/
 function ItemlListContainer(props) {
    
     const {id} = useParams();
-    let q;
-    let categoria = id;
-
+    const [items,setItems] = useState([]);  
     const [load,setLoad]= useState(false);
-
     const db = getFirestore();
-    const itemsCollection = collection(db, 'items')
 
-    if ( categoria === undefined){
-        q = itemsCollection;
-        categoria = 'Productos'
-    }
-    else {
-        q = query( itemsCollection , where('categoryId', '==',categoria),limit(50));
-    } 
-         
-    const [items,setItem] = useState([]);  
- 
+    const getData = async (category) =>{
+        try {
+          setLoad(true)
+          const document = category ? query(collection(db,"items"),where('categoryId','==',category))
+                                    : collection(db,"items")
+          const col = await getDocs(document);
+          const result = col.docs.map((doc) => doc = { id:doc.id,...doc.data()});
+          setItems(result);
+          console.log(result);
+          console.log('items' ,items);
+          setLoad(false);
+        } catch (error) {
+          console.log(error)
+        }
+      }  
+
     useEffect(()=>{
-        setLoad(true);
-        getDocs(q)
-        .then(snapshot =>{
-            setLoad(false);
-            setItem(snapshot.docs.map(doc => {
-                 return { ...doc.data(), id: doc.id}
-                }));
-                
-        })
-        .catch(
-            err=>{
-                console.log(err)
-            }
-        )
+        getData(id)
+   },[id])
 
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    },[id])
+   let cat;
+   id? cat=id : cat='Productos'
 
     return (
 
         load? <><div className='spinner'><h3>Cargando...</h3></div></>:
         <>
-        <h2 className='cat-title'>{categoria}</h2>
+        <h2 className='cat-title'>{cat}</h2>
         <div className='contenedor__productos'>
-            <ItemList items={items} category={categoria}/>
+            <ItemList items={items} />
         </div>
         </>
     );
