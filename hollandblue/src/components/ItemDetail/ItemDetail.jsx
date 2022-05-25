@@ -13,21 +13,25 @@ function ItemDetail({item}) {
 
     const cartCtx = useContext(CartContext);
     let cantidadEnCarrito = cartCtx.getCartQuantity();
-    let mostrartBoton;
 
+    
+    let controlDeStock = localStorage.getItem(item.id) // Recupero el stock que tiene desde el localstorage
+    let mostrartBoton;
+    
     //Cuando ingreso un producto seguirComprando es falso, pero habilito otro boton para cambiar su estado para seguir comprando
     function addHandler(cantIngresar) {
         cartCtx.addProducto({quantity: cantIngresar, ...item});
-        if(item.stock <=1) {item.stock=0}
+        if(controlDeStock <=1) {controlDeStock=0}
         else{
-            item.stock = item.stock-cantIngresar; 
+            controlDeStock = controlDeStock-cantIngresar; 
+            localStorage.setItem(item.id,controlDeStock)
         }
         setSeguirComprando(false);
     }
 
     if (seguirComprando) {
         mostrartBoton = <div className='container-button-continue'>
-                            <ItemCount initial={1} stock={item.stock} onAdd={addHandler} /> 
+                            <ItemCount initial={1} stock={controlDeStock} onAdd={addHandler} /> 
                             <Link className='link-arrow' to='../'><i className="fa-solid fa-arrow-left fa-2x"></i></Link>
                         </div>
 

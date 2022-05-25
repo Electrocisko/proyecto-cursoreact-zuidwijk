@@ -13,22 +13,22 @@ function ItemDetailContainer() {
 
     const getItem = async(idItem) =>{
         try {
-            setLoad(true)
-            const document = doc(db, "items", idItem)
-            const response = await getDoc(document)
-            const result = {id: response.id, ...response.data()}
-            
-            setProducto(result)
-            setLoad(false)
+            setLoad(true);
+            const document = doc(db, "items", idItem);
+            const response = await getDoc(document);
+            const result = {id: response.id, ...response.data()};
+           //cargo el stock del producto si no fue cargado antes no se modifica.
+            localStorage.getItem(result.id)==null && localStorage.setItem(result.id, result.stock);
+            setProducto(result);
+            setLoad(false);
 
         } catch (error) {
-            console.log(error)
+            console.log(error);
         }
     }
 
-
     useEffect(()=>{
-       getItem(id)
+       getItem(id);
     },[id])
 
     return (
