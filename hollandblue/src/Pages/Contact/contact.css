@@ -1,0 +1,30 @@
+.link-contacto {
+  margin: 5%;
+  font-size: large;
+  font-family: "Chakra Petch";
+  text-decoration: none;
+  font-weight: bolder;
+  padding: 10px;
+
+  border-radius: 5px;
+  width: 400px;
+}
+
+.contact-container a:visited {
+  color: blue;
+}
+
+.contact-container {
+  margin: 10px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: blue;
+}
+
+.vinculo {
+  margin-left: 10px;
+  margin-right: 10px;
+}

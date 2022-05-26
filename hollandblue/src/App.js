@@ -7,6 +7,7 @@ import ItemPage from './Pages/ItemPage';
 import CartPage from './Pages/CartPage';
 import AboutPage from './Pages/AboutPage';
 import Checkout from './Pages/Checkout/Checkout';
+import ContactPage from './Pages/Contact';
 
 
 
@@ -21,6 +22,7 @@ function App() {
           <Route path='/item/:id' element={<ItemPage/>}/>
           <Route path='/cart' element = {<CartPage/>}/>
           <Route path='/about' element ={<AboutPage/>}/>
+          <Route path='/contact' element={<ContactPage/>}/>
           <Route path='/checkout' element ={<Checkout/>}/>
           <Route path='*' element={<Navigate replace to='/'/>}/>
         </Routes>

@@ -51,9 +51,9 @@ function NavBar(props) {
             </ul>
           </li>
           <li className="menu__item">
-            <a href="#" className="menu__link">
+            <Link className="menu__link" to={"/contact"}>
               Contacto
-            </a>
+            </Link>
           </li>
           <span className="icono-carrito">
             {" "}

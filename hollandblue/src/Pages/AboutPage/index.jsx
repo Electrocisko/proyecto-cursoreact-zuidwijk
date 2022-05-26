@@ -3,7 +3,7 @@ import NavBar from "../../components/NavBar/NavBar";
 import "./about.css";
 import Vaca from "../../Assets/imagenes/vaca.jpg";
 import Adornos from "../../Assets/imagenes/adornos.jpg";
-import Azulejos from "../../Assets/imagenes/azulejos.jpg";
+
 
 function AboutPage(props) {
   return (
