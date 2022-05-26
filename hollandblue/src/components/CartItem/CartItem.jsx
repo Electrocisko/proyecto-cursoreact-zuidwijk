@@ -27,7 +27,7 @@ function CartItem({item}) {
 
     const removerPorId = ()=> {
         productsInCart.removerPorId(item.id);
-        localStorage.setItem(item.id,controlDeStock + productsInCart.getCartQuantity(item.id));
+        localStorage.removeItem(item.id)
     }
 
 

@@ -13,6 +13,12 @@ function Cart(props) {
   let cantDeProductos = carrito.getCartQuantity();
   let productosAmostrar = carrito.productos;
   let precioTotal = carrito.getTotalPrice();
+
+  const clearCart = ()=>{
+      carrito.clear();
+      localStorage.clear();
+  }
+
   
   if(cantDeItems > 0){
       return (
@@ -26,7 +32,7 @@ function Cart(props) {
           <h4>Precio Total: ${precioTotal.toLocaleString()}</h4>
         </div>
         <div className='container-remove'>
-            <button className='remove-items' onClick={()=>carrito.clear()}>Vaciar Carrito</button>
+            <button className='remove-items' onClick={()=>clearCart()}>Vaciar Carrito</button>
            <Link className='link' to='/'><button className='remove-items'>Seguir Comprando</button></Link> 
            <Link className='link' to='/checkout'><button className='remove-items'>Terminar Compra</button></Link>
         </div>

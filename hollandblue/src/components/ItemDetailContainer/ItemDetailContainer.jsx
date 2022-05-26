@@ -17,7 +17,7 @@ function ItemDetailContainer() {
             const document = doc(db, "items", idItem);
             const response = await getDoc(document);
             const result = {id: response.id, ...response.data()};
-           //cargo el stock del producto si no fue cargado antes no se modifica.
+           //cargo el stock del producto en localstorage con su id asi despues puedo controlar el stock.
             localStorage.getItem(result.id)==null && localStorage.setItem(result.id, result.stock);
             setProducto(result);
             setLoad(false);

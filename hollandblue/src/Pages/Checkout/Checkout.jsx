@@ -44,6 +44,7 @@ function Checkout(props) {
 
 
     const handleSubmit = (e) =>{
+       
         e.preventDefault();
         const items = productos.map((el)=>{
             return{
@@ -83,8 +84,6 @@ function Checkout(props) {
         else {
 
             return(
-
-                
                 load? <><NavBar/><div className='spinner'><h3>Cargando...</h3></div></>:
                     <>
                     <NavBar/>

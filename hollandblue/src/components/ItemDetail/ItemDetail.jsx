@@ -21,7 +21,7 @@ function ItemDetail({item}) {
     //Cuando ingreso un producto seguirComprando es falso, pero habilito otro boton para cambiar su estado para seguir comprando
     function addHandler(cantIngresar) {
         cartCtx.addProducto({quantity: cantIngresar, ...item});
-        if(controlDeStock <=1) {controlDeStock=0}
+        if(controlDeStock <=0) {controlDeStock=0}
         else{
             controlDeStock = controlDeStock-cantIngresar; 
             localStorage.setItem(item.id,controlDeStock)
