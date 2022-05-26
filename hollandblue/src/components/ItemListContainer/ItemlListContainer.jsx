@@ -27,7 +27,6 @@ function ItemlListContainer() {
       }  
 
     useEffect(()=>{
-      console.log('useeffect itemlistcontainer');
         getData(id)
    },[id])
 

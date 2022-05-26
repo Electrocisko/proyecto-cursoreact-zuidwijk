@@ -1,4 +1,4 @@
-import { addDoc, collection, getFirestore } from 'firebase/firestore';
+import { addDoc, collection, doc, getFirestore, updateDoc } from 'firebase/firestore';
 import React, { useContext, useState } from 'react';
 import MyButton from '../../components/MyButton/MyButton';
 import NavBar from '../../components/NavBar/NavBar';
@@ -21,6 +21,18 @@ function Checkout(props) {
 
     const {nombre,telefono,email} = buyer;
 
+    //Funcion que actualiza el stock en firebase, el stock nuevo se recupera de localstorage
+    const upDateStock = ()=>{
+        const dbItems = getFirestore();
+       
+        for (let i=0; i<localStorage.length; i++){
+            let clave = localStorage.key(i);
+            const newStock = doc(dbItems,'items', clave);
+            updateDoc(newStock, {stock: parseInt(localStorage.getItem(clave))});
+        }
+        localStorage.clear();
+    }
+
     const handleInputChange = (e)=>{
         setBuyer(( {...buyer, [e.target.name]: e.target.value})) 
     };
@@ -42,9 +54,9 @@ function Checkout(props) {
         })
     }
 
-
+    //Funcion que sube la orden en firestore y llama la funcion update stock
     const handleSubmit = (e) =>{
-       
+      
         e.preventDefault();
         const items = productos.map((el)=>{
             return{
@@ -58,6 +70,8 @@ function Checkout(props) {
         const precioTotal = getTotalPrice();
         const data = {buyer, items, buyDate, precioTotal};
         upOrder(data);
+   
+        upDateStock();
     }
 
 
