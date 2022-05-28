@@ -1,11 +1,45 @@
-# proyecto-cursoreact-zuidwijk
-Proyecto de curso de react Coderhouse comisión 31150
+# Blue Holland
 
-El proyecto es un comercio electrónico de artesanía típica de los Países Bajos denominado Delft Blue.
-Por el momento no utilice ninguna librería externa, la idea es utilizar CSS para dar estilos a todo, para que sea responsive utilice Flexbox en las cards.
-Por el momento el navbar no es responsive, pero en futuro si.
-La pagina contiene un navbar que muestra el logo, la marca, productos con un dropdown para mostrar las tres categorías y por ultimo el icono del carrito de compras.
-El home muestra todos los productos, si una clickea sobre la imagen o titulo puede entrar a detalle del producto.
-Dentro de detalle del producto esta el counter para agregar a carrito.
+Es un proyecto de  e-commerce de fantasía que vende artesanías típicos de los Paises Bajos.
+Uno puede navegar en el portal , desde el Navbar elegir ver todos los productos o por categorias, ver en detalle el producto y agregar o quitar items al carrito de compras.
+En el carrito puede modificar las cantidades e incluso remover un item o vaciar todo.
+Durante todo el proceso de compra se controla el stock  y una vez confirmado la compra se emite un orden de compra y se actualiza el stock en la base de datos. 
+
+
+## Instalación
+
+Clonar el repositorio en la consola:
+
+```bash
+clone git https://github.com/Electrocisko/proyecto-cursoreact-zuidwijk.git
+```
+Ejecutar
+
+```bash
+npm instal
+```
+
+```bash
+npm start
+```
+http://localhost:3000 para ver en el browser.
+
+## Desarrollado con:
+
+HTML
+JAVA
+CSS
+REACT JS
+Google Firebase como base de datos.
+Libreria Sweet Alert.
+
+
+## Contribuciones:
+
+Este proyecto fue desarrollado dentro del curso de React JS de Coderhouse.
+Se agradece al Profesor Diego Medina y a la Tutora Ailín Nakaganeku por el apoyo brindado.
+
+## License
+
 
 ![Animation](https://user-images.githubusercontent.com/95722318/166915957-cfb71811-b0f8-4a01-bda4-ee5d3bd992fb.gif)
