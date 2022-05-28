@@ -30,7 +30,11 @@ http://localhost:3000 para ver en el browser.
 <img src="https://img.icons8.com/color/48/000000/css3.png"/> CSS
 <img src="https://img.icons8.com/color/48/000000/javascript--v1.png"/> Javascript
 <img src="https://img.icons8.com/cute-clipart/64/000000/react-native.png"/> React JS
+<img src="https://img.icons8.com/color/48/000000/npm.png"/> NPM
+<img src="https://img.icons8.com/color/48/000000/nodejs.png"/> Node JS
+<img src="https://img.icons8.com/ios/50/000000/visual-studio.png"/> VSC
 <img src="https://img.icons8.com/color/48/000000/firebase.png"/> Google Firebase
+
 
 
 Libreria Sweet Alert.
