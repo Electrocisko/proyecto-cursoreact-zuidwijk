@@ -1,9 +1,6 @@
 # Blue Holland
 
-Es un proyecto de  e-commerce de fantasía que vende artesanías típicos de los Paises Bajos.
-Uno puede navegar en el portal , desde el Navbar elegir ver todos los productos o por categorias, ver en detalle el producto y agregar o quitar items al carrito de compras.
-En el carrito puede modificar las cantidades e incluso remover un item o vaciar todo.
-Durante todo el proceso de compra se controla el stock  y una vez confirmado la compra se emite un orden de compra y se actualiza el stock en la base de datos. 
+Es un proyecto de e-commerce de fantasía que vende artesanías típicas de los Paises Bajos. Uno puede navegar en el portal , desde el Navbar elegir ver todos los productos o por categorías, ver en detalle el producto y agregar o quitar ítems al carrito de compras. En el carrito puede modificar las cantidades e incluso remover un ítem o vaciar todo. Durante todo el proceso de compra se controla el stock y una vez confirmada la compra se emite un orden de compra y se actualiza la base de datos.
 
 
 ## Instalación
@@ -13,7 +10,7 @@ Clonar el repositorio en la consola:
 ```bash
 git clone https://github.com/Electrocisko/proyecto-cursoreact-zuidwijk.git
 ```
-Ejecutar
+Ejecutar (No olvidarse de estar en el directorio correcto- carpeta hollandblue)
 
 ```bash
 npm instal
@@ -45,7 +42,8 @@ Libreria Sweet Alert.
 Este proyecto fue desarrollado dentro del curso de React JS de Coderhouse.
 Se agradece al Profesor Diego Medina y a la Tutora Ailín Nakaganeku por el apoyo brindado.
 
-## License
+## Animación de la página:
+  
+![hollandblue-react](https://user-images.githubusercontent.com/95722318/171035539-37032818-09a1-4794-aa05-7c5274ec261a.gif)
 
 
-![Animation](https://user-images.githubusercontent.com/95722318/166915957-cfb71811-b0f8-4a01-bda4-ee5d3bd992fb.gif)
