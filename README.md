@@ -3,7 +3,7 @@
 Es un proyecto de  e-commerce de fantasía que vende artesanías típicos de los Paises Bajos.
 Uno puede navegar en el portal , desde el Navbar elegir ver todos los productos o por categorias, ver en detalle el producto y agregar o quitar items al carrito de compras.
 En el carrito puede modificar las cantidades e incluso remover un item o vaciar todo.
-Durante todo el proceso de compra se controla el stock  y una vez confirmado la compra se emite un orden de compra y se actualiza el stock en la base de datos. 
+Durante todo el proceso de compra se controla el stock  y una vez confirmado la compra se emite un orden de compra y se actualiza la base de datos. 
 
 
 ## Instalación
