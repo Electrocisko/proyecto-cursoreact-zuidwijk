@@ -1,13 +1,12 @@
-import React, { useContext } from "react";
+import React from "react";
 import "./NavBarResponsive.css";
 import CartWidget from "../CartWidget/CartWidget";
 import molino from "./imagenes/molino.png";
 import { Link } from "react-router-dom";
-import CartContext from "../../Context/cart-context";
+
 
 function NavBar(props) {
-  const cart = useContext(CartContext);
-  const itemsCart = cart.getCartQuantity();
+ 
 
   return (
     <>
