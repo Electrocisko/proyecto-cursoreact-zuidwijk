@@ -1,9 +1,6 @@
 # Blue Holland
 
-Es un proyecto de  e-commerce de fantasía que vende artesanías típicos de los Paises Bajos.
-Uno puede navegar en el portal , desde el Navbar elegir ver todos los productos o por categorias, ver en detalle el producto y agregar o quitar items al carrito de compras.
-En el carrito puede modificar las cantidades e incluso remover un item o vaciar todo.
-Durante todo el proceso de compra se controla el stock  y una vez confirmado la compra se emite un orden de compra y se actualiza la base de datos. 
+Es un proyecto de e-commerce de fantasía que vende artesanías típicas de los Paises Bajos. Uno puede navegar en el portal , desde el Navbar elegir ver todos los productos o por categorías, ver en detalle el producto y agregar o quitar ítems al carrito de compras. En el carrito puede modificar las cantidades e incluso remover un ítem o vaciar todo. Durante todo el proceso de compra se controla el stock y una vez confirmada la compra se emite un orden de compra y se actualiza la base de datos.
 
 
 ## Instalación
@@ -47,7 +44,6 @@ Se agradece al Profesor Diego Medina y a la Tutora Ailín Nakaganeku por el apoy
 
 ## Animación de la página:
   
-
 ![hollandblue-react](https://user-images.githubusercontent.com/95722318/171035539-37032818-09a1-4794-aa05-7c5274ec261a.gif)
 
 
