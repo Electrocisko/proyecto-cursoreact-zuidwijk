@@ -45,7 +45,9 @@ Libreria Sweet Alert.
 Este proyecto fue desarrollado dentro del curso de React JS de Coderhouse.
 Se agradece al Profesor Diego Medina y a la Tutora Ailín Nakaganeku por el apoyo brindado.
 
-## License
+## Animación de la página:
+  
+
+![hollandblue-react](https://user-images.githubusercontent.com/95722318/171035539-37032818-09a1-4794-aa05-7c5274ec261a.gif)
 
 
-![Animation](https://user-images.githubusercontent.com/95722318/166915957-cfb71811-b0f8-4a01-bda4-ee5d3bd992fb.gif)
