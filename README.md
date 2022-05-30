@@ -13,7 +13,7 @@ Clonar el repositorio en la consola:
 ```bash
 git clone https://github.com/Electrocisko/proyecto-cursoreact-zuidwijk.git
 ```
-Ejecutar
+Ejecutar (No olvidarse de estar en el directorio correcto- carpeta hollandblue)
 
 ```bash
 npm instal
