@@ -105,7 +105,7 @@
 }
 
 
-@media(max-width:1024px){
+@media(max-width:800px){
  
     #navbar-brand{
         display: none;
