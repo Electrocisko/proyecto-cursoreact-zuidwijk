@@ -11,7 +11,7 @@ Durante todo el proceso de compra se controla el stock  y una vez confirmado la 
 Clonar el repositorio en la consola:
 
 ```bash
-clone git https://github.com/Electrocisko/proyecto-cursoreact-zuidwijk.git
+git clone https://github.com/Electrocisko/proyecto-cursoreact-zuidwijk.git
 ```
 Ejecutar
 
